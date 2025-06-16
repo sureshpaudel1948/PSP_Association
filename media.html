@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Center</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="css/img/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Inline CSS to ensure dropdown visibility -->
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-blue-900">
+          <a href="index.html">
+            <img
+              src="css/img/logo.png"
+              alt="PSP Association Logo"
+              class="h-20 w-auto"
+              style="margin: 0; padding: 0"
+            />
+          </a>
+        </div>
+        <ul class="flex space-x-6 items-center">
+          <li>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="text-blue-600 hover:text-blue-800"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="events.html" class="text-blue-600 hover:text-blue-800"
+              >Events</a
+            >
+          </li>
+          <li class="relative">
+            <a
+              href="media.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="media-dropdown-toggle"
+              >Media
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="media-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="#notice"
+                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Notice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#newsletter"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Newsletter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blogs"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#publications"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Publications</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#gallery"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative">
+            <a
+              href="resources.html"
+              class="text-blue-600 hover:text-blue-800 flex items-center"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="resources-dropdown-toggle"
+              >Resources
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="resources-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="resources.html#legislation"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Legislation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#directives"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Directives and Guidelines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#bylaws"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Bylaws</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#policies"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Policies and Strategies</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
+              >Advocacy</a
+            >
+          </li>
+          <li>
+            <a href="index.html#contact" class="text-blue-600 hover:text-blue-800"
+              >Contact</a
+            >
+          </li>
+          <li class="ml-10">
+            <a
+              href="membership.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >Become a Member</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+      <!-- Media Overview Section -->
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-900 mb-4">Media Center</h1>
+        <p class="text-gray-700 max-w-2xl mx-auto" style="text-align: justify">
+          Stay updated with the latest news, insights, and resources from the
+          PSP Association. Explore our notices, newsletters, blogs,
+          publications, and event galleries to learn more about our work in
+          advancing digital payments in Nepal.
+        </p>
+      </section>
+
+      <!-- Notice Section -->
+      <section class="mb-12" id="notice">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Notice</h2>
+        <div
+          class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+        >
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">
+            Annual General Meeting 2025
+          </h3>
+          <p class="text-gray-600 mb-2">
+            <strong>Date:</strong> July 30, 2025<br />
+            <strong>Details:</strong> The PSP Association will hold its Annual
+            General Meeting to discuss strategic goals and member updates. All
+            members are requested to attend.
+          </p>
+          <a
+            href="#details"
+            class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+            >Read More</a
+          >
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="mb-12" id="newsletter">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Newsletter</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/newsletter1.jpg"
+              alt="Q2 2025 Newsletter"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Q2 2025 Newsletter
+            </h3>
+            <p class="text-gray-600">
+              Highlights from our latest initiatives, upcoming events, and
+              industry trends in digital payments.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="media/pdfs/q2_2025_newsletter.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/newsletter2.jpg"
+              alt="Q1 2025 Newsletter"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Q1 2025 Newsletter
+            </h3>
+            <p class="text-gray-600">
+              Recap of our Q1 activities, including event highlights and member
+              spotlights.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="media/pdfs/q1_2025_newsletter.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+        <div class="text-center mt-6">
+          <a
+            href="#subscribe"
+            class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+            >Subscribe to Newsletter</a
+          >
+        </div>
+      </section>
+
+      <!-- Blogs Section -->
+      <section class="mb-12" id="blogs">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Blogs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/blog1.webp"
+              alt="The Future of QR Payments"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              The Future of QR Payments
+            </h3>
+            <p class="text-gray-600">
+              Exploring how QR payments are transforming Nepal’s financial
+              landscape.
+            </p>
+            <a
+              href="#blog"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Read More</a
+            >
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/blog2.png"
+              alt="Blockchain in Digital Wallets"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Blockchain in Digital Wallets
+            </h3>
+            <p class="text-gray-600">
+              How blockchain technology enhances security in digital
+              transactions.
+            </p>
+            <a
+              href="#blog"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Read More</a
+            >
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/blog3.jpg"
+              alt="Financial Inclusion in Nepal"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Financial Inclusion in Nepal
+            </h3>
+            <p class="text-gray-600">
+              Strategies to expand access to digital financial services.
+            </p>
+            <a
+              href="#blog"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Read More</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- Publications Section -->
+      <section class="mb-12" id="publications">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Publications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/publication1.jpg"
+              alt="Annual Report 2024"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Annual Report 2024
+            </h3>
+            <p class="text-gray-600">
+              Comprehensive overview of our activities and achievements in 2024.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="media/pdfs/annual_report_2024.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/publication2.jpg"
+              alt="Digital Payments Whitepaper"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Digital Payments Whitepaper
+            </h3>
+            <p class="text-gray-600">
+              In-depth analysis of digital payment trends in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="media/pdfs/digital_payments_whitepaper.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="mb-12" id="gallery">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Gallery</h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          <div class="relative">
+            <img
+              src="css/img/gallery1.webp"
+              alt="FinTech Conference 2024"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+            <p
+              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2 text-sm"
+            >
+              FinTech Conference 2024
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="css/img/gallery2.webp"
+              alt="Workshop Attendees"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+            <p
+              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2 text-sm"
+            >
+              Workshop Attendees
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="css/img/gallery3.webp"
+              alt="Networking Event"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+            <p
+              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2 text-sm"
+            >
+              Networking Event
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="css/img/gallery4.jpg"
+              alt="Digital Expo 2024"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+            <p
+              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2 text-sm"
+            >
+              Digital Expo 2024
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PDF Viewer Modal -->
+    <div
+      id="pdf-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50"
+      role="dialog"
+      aria-labelledby="pdf-modal-title"
+      aria-modal="true"
+    >
+      <div
+        class="bg-white rounded-lg w-full max-w-3xl max-h-[70vh] flex flex-col relative"
+      >
+        <div class="p-4 border-b flex justify-between items-center">
+          <h2 id="pdf-modal-title" class="text-xl font-semibold text-blue-900">
+            PDF Viewer
+          </h2>
+          <button
+            id="close-modal"
+            class="text-gray-600 hover:text-gray-800 focus:outline-none z-10"
+            aria-label="Close PDF Viewer"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4">
+          <canvas id="pdf-canvas" class="w-full"></canvas>
+        </div>
+        <div
+          id="pdf-controls"
+          class="p-4 border-t bg-white sticky bottom-0 flex justify-between items-center"
+        >
+          <button
+            id="prev-page"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+            disabled
+          >
+            Previous
+          </button>
+          <span id="page-info" class="text-gray-600"
+            >Page 1 of <span id="total-pages">1</span></span
+          >
+          <button
+            id="next-page"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+            disabled
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
+            <p class="text-gray-300">
+              Empowering professionals with resources, events, and community
+              support for PSP excellence.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="events.html" class="text-gray-300 hover:text-white"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="advocacy.html" class="text-gray-300 hover:text-white"
+                  >Advocacy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-300">Email: info@pspAssociation.org</p>
+            <p class="text-gray-300">Phone: (+977) 9817562904</p>
+            <p class="text-gray-300">Address: Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-300">
+          © 2025 PSP Association. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
