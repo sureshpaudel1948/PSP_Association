@@ -1,11 +1,41 @@
+/* Custom styles to complement Tailwind */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Custom styles to complement Tailwind */
 body {
   font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    130deg,
+    #e6f0fa 0%,
+    #7ec3ff 90%,
+    #c3d6ff 60%,
+    #ffffff 98%
+  ); /* Light blue gradient */
+  position: relative;
+  min-height: 100vh; /* Ensure body covers full viewport height */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Subtle wave pattern using pseudo-element */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.29),
+    /* Semi-transparent white for wave effect */ rgba(255, 255, 255, 0.1) 10px,
+    transparent 20px,
+    transparent 120px
+  ); /* Creates a subtle diagonal wave pattern */
+  opacity: 0.3; /* Low opacity for subtlety */
+  z-index: -1; /* Place behind content */
+  pointer-events: none; /* Prevent interaction with pseudo-element */
 }
 
 .py-4 {
@@ -20,6 +50,28 @@ nav ul li a {
 
 .form input:focus {
   border-color: #2563eb;
+}
+
+/* Invalid input styling */
+input:invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Card hover effect */
+.bg-white:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form {
+    max-width: 100%;
+  }
+  .bg-blue-50 {
+    padding: 1rem;
+  }
 }
 
 footer a {
@@ -43,4 +95,51 @@ footer a {
   object-fit: contain;
   margin-bottom: 10px;
   cursor: pointer;
+}
+
+/* Dropdown menu styling */
+.group:hover #resources-dropdown,
+#resources-dropdown.show {
+  display: block;
+}
+
+#resources-dropdown {
+  display: none;
+}
+
+/* PDF viewer modal styling */
+#pdf-modal {
+  transition: opacity 0.3s ease;
+}
+
+#pdf-modal.show {
+  display: flex;
+}
+
+#pdf-canvas {
+  border: 1px solid #e5e7eb;
+  max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form {
+    max-width: 100%;
+  }
+  .bg-blue-50 {
+    padding: 1rem;
+  }
+  #resources-dropdown {
+    width: 100%;
+    left: 0;
+  }
+  #pdf-modal .max-w-3xl {
+    width: 95%;
+    max-height: 80vh;
+  }
+}
+
+#media-dropdown.show,
+#resources-dropdown.show {
+  display: block;
 }
