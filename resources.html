@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="css/img/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-blue-900">
+          <a href="index.html">
+            <img
+              src="css/img/logo.png"
+              alt="PSP Association Logo"
+              class="h-20 w-auto"
+              style="margin: 0; padding: 0"
+            />
+          </a>
+        </div>
+        <ul class="flex space-x-6 items-center">
+          <li>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="text-blue-600 hover:text-blue-800"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="events.html" class="text-blue-600 hover:text-blue-800"
+              >Events</a
+            >
+          </li>
+          <li class="relative">
+            <a
+              href="media.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="media-dropdown-toggle"
+              >Media
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="media-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="media.html#notice"
+                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Notice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#newsletter"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Newsletter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#blogs"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#publications"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Publications</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#gallery"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a
+              href="resources.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="resources-dropdown-toggle"
+              >Resources
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="resources-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="#legislation"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Legislation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#directives"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Directives and Guidelines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#bylaws"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Bylaws</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#policies"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Policies and Strategies</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
+              >Advocacy</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#contact"
+              class="text-blue-600 hover:text-blue-800"
+              >Contact</a
+            >
+          </li>
+          <li class="ml-10">
+            <a
+              href="membership.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >Become a Member</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+      <!-- Resources Overview Section -->
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-900 mb-4">Resources</h1>
+        <p class="text-gray-700 max-w-2xl mx-auto" style="text-align: justify">
+          Access a comprehensive collection of legislation, directives, bylaws,
+          and policies related to digital payments in Nepal. These resources
+          provide valuable insights and guidelines for Payment Service Providers
+          and stakeholders to ensure compliance and foster innovation.
+        </p>
+      </section>
+
+      <!-- Legislation Section -->
+      <section class="mb-12" id="legislation">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Legislation</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Banks and Financial Institutions Act, 2073
+            </h3>
+            <p class="text-gray-600">
+              Regulations governing financial institutions in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/banks_financial_act_2073.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Consumer Protection Act, 2075
+            </h3>
+            <p class="text-gray-600">
+              Laws protecting consumer rights in financial transactions.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/consumer_protection_act_2075.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              E-commerce Act, 2081
+            </h3>
+            <p class="text-gray-600">
+              Framework for regulating e-commerce activities.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/ecommerce_act_2081.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Electronic Transactions Act, 2063
+            </h3>
+            <p class="text-gray-600">
+              Legal provisions for electronic transactions.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/electronic_transactions_act_2063.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Income Tax Act, 2058
+            </h3>
+            <p class="text-gray-600">
+              Taxation rules applicable to financial entities.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/income_tax_act_2058.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Money Laundering Prevention Act, 2063
+            </h3>
+            <p class="text-gray-600">
+              Measures to prevent money laundering in financial systems.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/money_laundering_act_2063.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Payment and Settlement Bylaw, 2075
+            </h3>
+            <p class="text-gray-600">
+              Rules for payment and settlement systems.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/payment_settlement_bylaw_2075.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Privacy Act, 2075
+            </h3>
+            <p class="text-gray-600">
+              Regulations for protecting personal data.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/privacy_act_2075.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Value Added Tax Act, 2052
+            </h3>
+            <p class="text-gray-600">
+              Tax regulations for value-added services.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/value_added_tax_act_2052.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Directives and Guidelines Section -->
+      <section class="mb-12" id="directives">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+          Directives and Guidelines
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Directives for Data Centre and Cloud Service, 2081
+            </h3>
+            <p class="text-gray-600">
+              Guidelines for data center and cloud service operations.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/data_centre_directives_2081.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Guidelines for Threshold Transaction Reporting, 2076
+            </h3>
+            <p class="text-gray-600">
+              Reporting requirements for significant transactions.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/threshold_transaction_guidelines_2076.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              NRB AML/CFT Directives for PSP/PSOs
+            </h3>
+            <p class="text-gray-600">
+              Anti-money laundering directives for payment service providers.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/nrb_aml_cft_directives.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Payment System Related Unified Directives, 2081
+            </h3>
+            <p class="text-gray-600">
+              Unified directives for payment systems in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/payment_system_directives_2081.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              STR/SAR Guidelines, July 2021
+            </h3>
+            <p class="text-gray-600">
+              Guidelines for suspicious transaction reporting.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/str_sar_guidelines_2021.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bylaws Section -->
+      <section class="mb-12" id="bylaws">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Bylaws</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Consumer Protection Regulation, 2076
+            </h3>
+            <p class="text-gray-600">
+              Rules for consumer protection in financial services.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/consumer_protection_regulation_2076.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Cyber Resilience Guidelines, 2023
+            </h3>
+            <p class="text-gray-600">
+              Guidelines for enhancing cyber resilience in financial systems.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/cyber_resilience_guidelines_2023.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Electronic Transactions Rules, 2064
+            </h3>
+            <p class="text-gray-600">
+              Rules governing electronic transactions in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/electronic_transactions_rules_2064.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Income Tax Rules, 2059
+            </h3>
+            <p class="text-gray-600">
+              Detailed rules for income tax compliance.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/income_tax_rules_2059.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Money Laundering Prevention Rule, 2081
+            </h3>
+            <p class="text-gray-600">
+              Updated rules to prevent money laundering.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/money_laundering_rule_2081.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Payment and Settlement Bylaw, 2077
+            </h3>
+            <p class="text-gray-600">
+              Bylaws for payment and settlement operations.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/payment_settlement_bylaw_2077.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Payment System Inspection and Supervision Bylaw, 2078
+            </h3>
+            <p class="text-gray-600">
+              Regulations for inspecting and supervising payment systems.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/payment_system_inspection_bylaw_2078.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Privacy Regulation, 2077
+            </h3>
+            <p class="text-gray-600">
+              Rules for ensuring data privacy in financial services.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/privacy_regulation_2077.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Value Added Tax Rules, 2053
+            </h3>
+            <p class="text-gray-600">
+              Detailed rules for value-added tax compliance.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/value_added_tax_rules_2053.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Policies and Strategies Section -->
+      <section class="mb-12" id="policies">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+          Policies and Strategies
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              AML/CFT National Strategy and Action Plan, 2081
+            </h3>
+            <p class="text-gray-600">
+              National strategy to combat money laundering and terrorism
+              financing.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/aml_cft_strategy_2081.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              DNF 2076 (English)
+            </h3>
+            <p class="text-gray-600">
+              Digital Nepal Framework in English, 2076.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/dnf_2076_english.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              DNF 2076 (Nepali)
+            </h3>
+            <p class="text-gray-600">
+              Digital Nepal Framework in Nepali, 2076.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/dnf_2076_nepali.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              DNF v2, 2024
+            </h3>
+            <p class="text-gray-600">Updated Digital Nepal Framework, 2024.</p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/dnf_v2_2024.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Information and Technology Policy, 2072
+            </h3>
+            <p class="text-gray-600">
+              Policy for advancing IT infrastructure in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/it_policy_2072.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              National Cyber Security Policy, 2080
+            </h3>
+            <p class="text-gray-600">
+              Policy for enhancing cybersecurity in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/cyber_security_policy_2080.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Payment Service Provider Licensing Policy, 2079
+            </h3>
+            <p class="text-gray-600">
+              Licensing requirements for PSPs in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/psp_licensing_policy_2079.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- PDF Viewer Modal -->
+    <div
+      id="pdf-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50"
+      role="dialog"
+      aria-labelledby="pdf-modal-title"
+      aria-modal="true"
+    >
+      <div
+        class="bg-white rounded-lg w-full max-w-3xl max-h-[70vh] flex flex-col relative"
+      >
+        <div class="p-4 border-b flex justify-between items-center">
+          <h2 id="pdf-modal-title" class="text-xl font-semibold text-blue-900">
+            PDF Viewer
+          </h2>
+          <button
+            id="close-modal"
+            class="text-gray-600 hover:text-gray-800 focus:outline-none z-10"
+            aria-label="Close PDF Viewer"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4">
+          <canvas id="pdf-canvas" class="w-full"></canvas>
+        </div>
+        <div
+          id="pdf-controls"
+          class="p-4 border-t bg-white sticky bottom-0 flex justify-between items-center"
+        >
+          <button
+            id="prev-page"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+            disabled
+          >
+            Previous
+          </button>
+          <span id="page-info" class="text-gray-600"
+            >Page 1 of <span id="total-pages">1</span></span
+          >
+          <button
+            id="next-page"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+            disabled
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
+            <p class="text-gray-300">
+              Empowering professionals with resources, events, and community
+              support for PSP excellence.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="events.html" class="text-gray-300 hover:text-white"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="advocacy.html" class="text-gray-300 hover:text-white"
+                  >Advocacy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-300">Email: info@pspAssociation.org</p>
+            <p class="text-gray-300">Phone: (+977) 9817562904</p>
+            <p class="text-gray-300">Address: Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-300">
+          © 2025 PSP Association. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
