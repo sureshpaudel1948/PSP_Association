@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="css/img/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-blue-900">
+          <a href="index.html">
+            <img
+              src="css/img/logo.png"
+              alt="PSP Association Logo"
+              class="h-20 w-auto"
+              style="margin: 0; padding: 0"
+            />
+          </a>
+        </div>
+        <ul class="flex space-x-6 items-center">
+          <li>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="text-blue-600 hover:text-blue-800"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="events.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold"
+              aria-current="page"
+              >Events</a
+            >
+          </li>
+          <li class="relative">
+            <a
+              href="media.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="media-dropdown-toggle"
+              >Media
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="media-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="media.html#notice"
+                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Notice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#newsletter"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Newsletter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#blogs"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#publications"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Publications</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#gallery"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a
+              href="resources.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="resources-dropdown-toggle"
+              >Resources
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="resources-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="resources.html#legislation"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Legislation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#directives"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Directives and Guidelines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#bylaws"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Bylaws</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#policies"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Policies and Strategies</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
+              >Advocacy</a
+            >
+          </li>
+          <li>
+            <a href="index.html#contact" class="text-blue-600 hover:text-blue-800"
+              >Contact</a
+            >
+          </li>
+          <li class="ml-10">
+            <a
+              href="membership.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >Become a Member</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+      <!-- Events Overview Section -->
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-900 mb-4">
+          Events at PSP Association
+        </h1>
+        <p class="text-gray-700 max-w-2xl mx-auto" style="text-align: justify">
+          The PSP Association hosts and supports a variety of events to foster
+          innovation, collaboration, and digital literacy in Nepal’s payment
+          service industry. Join us for webinars, workshops, and networking
+          sessions to connect with industry leaders and stay updated on digital
+          payment trends.
+        </p>
+      </section>
+
+      <!-- Upcoming Events Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+          Upcoming Events
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/event1.jpg"
+              alt="Digital Payments Summit"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Digital Payments Summit 2025
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Date:</strong> July 15, 2025<br />
+              <strong>Location:</strong> Kathmandu, Nepal
+            </p>
+            <p class="text-gray-600">
+              Join industry leaders to discuss the future of digital payments in
+              Nepal. Topics include QR payments, blockchain, and financial
+              inclusion.
+            </p>
+            <a
+              href="#register"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Register Now</a
+            >
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/event2.jpg"
+              alt="Webinar: Secure Transactions"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Webinar: Secure Transactions
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Date:</strong> August 5, 2025<br />
+              <strong>Location:</strong> Online
+            </p>
+            <p class="text-gray-600">
+              Learn best practices for securing digital transactions in this
+              expert-led webinar.
+            </p>
+            <a
+              href="#register"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Register Now</a
+            >
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/event3.jpg"
+              alt="Networking Meetup"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Networking Meetup
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Date:</strong> September 10, 2025<br />
+              <strong>Location:</strong> Pokhara, Nepal
+            </p>
+            <p class="text-gray-600">
+              Connect with PSP professionals and share insights in a relaxed
+              setting.
+            </p>
+            <a
+              href="#register"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Register Now</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- Past Events Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Past Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/past_event1.jpg"
+              alt="FinTech Conference 2024"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              FinTech Conference 2024
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Date:</strong> November 20, 2024<br />
+              <strong>Location:</strong> Kathmandu, Nepal
+            </p>
+            <p class="text-gray-600">
+              A successful conference with over 200 attendees discussing digital
+              wallet innovations.
+            </p>
+            <a
+              href="#gallery"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >View Gallery</a
+            >
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/past_event2.jpg"
+              alt="Workshop: QR Payments"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Workshop: QR Payments
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Date:</strong> March 15, 2024<br />
+              <strong>Location:</strong> Online
+            </p>
+            <p class="text-gray-600">
+              Hands-on training for implementing secure QR payment systems.
+            </p>
+            <a
+              href="#gallery"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >View Gallery</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- Supported Events Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+          Supported Events
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/supported_event1.jpg"
+              alt="Nepal Digital Expo"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Nepal Digital Expo 2025
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Date:</strong> June 1, 2025<br />
+              <strong>Location:</strong> Kathmandu, Nepal
+            </p>
+            <p class="text-gray-600">
+              Sponsored by PSP Association, showcasing digital payment
+              innovations.
+            </p>
+            <a
+              href="#details"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Learn More</a
+            >
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="css/img/supported_event2.jpg"
+              alt="Financial Inclusion Summit"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Financial Inclusion Summit
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Date:</strong> April 10, 2025<br />
+              <strong>Location:</strong> Biratnagar, Nepal
+            </p>
+            <p class="text-gray-600">
+              Supported event promoting accessible financial services across
+              Nepal.
+            </p>
+            <a
+              href="#details"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Learn More</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
+            <p class="text-gray-300">
+              Empowering professionals with resources, events, and community
+              support for PSP excellence.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="events.html" class="text-gray-300 hover:text-white"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="advocacy.html" class="text-gray-300 hover:text-white"
+                  >Advocacy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-300">Email: info@pspAssociation.org</p>
+            <p class="text-gray-300">Phone: (+977) 9817562904</p>
+            <p class="text-gray-300">Address: Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-300">
+          © 2025 PSP Association. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
