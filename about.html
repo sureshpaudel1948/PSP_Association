@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="icon" href="css/img/logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body class="bg-gray-100 font-sans">
@@ -18,7 +19,7 @@
         <div class="text-2xl font-bold text-blue-900">
           <a href="index.html">
             <img
-              src="css/img/logo.jpg"
+              src="css/img/logo.png"
               alt="PSP Association Logo"
               class="h-20 w-auto"
               style="margin: 0; padding: 0"
@@ -36,7 +37,7 @@
           </li>
           <li>
             <a href="about.html" class="text-blue-600 hover:text-blue-800"
-              >About Us</a
+              >About</a
             >
           </li>
           <li>
@@ -44,10 +45,139 @@
               >Events</a
             >
           </li>
-          <li>
-            <a href="resources.html" class="text-blue-600 hover:text-blue-800"
-              >Resources</a
+          <li class="relative">
+            <a
+              href="media.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="media-dropdown-toggle"
+              >Media
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="media-dropdown"
+              role="menu"
             >
+              <li>
+                <a
+                  href="media.html#notice"
+                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Notice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#newsletter"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Newsletter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#blogs"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#publications"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Publications</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#gallery"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a
+              href="resources.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="resources-dropdown-toggle"
+              >Resources
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="resources-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="resources.html#legislation"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Legislation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#directives"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Directives and Guidelines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#bylaws"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Bylaws</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#policies"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Policies and Strategies</a
+                >
+              </li>
+            </ul>
           </li>
           <li>
             <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
@@ -55,8 +185,8 @@
             >
           </li>
           <li>
-            <a href="#contact" class="text-blue-600 hover:text-blue-800"
-              >Contact Us</a
+            <a href="index.html#contact" class="text-blue-600 hover:text-blue-800"
+              >Contact</a
             >
           </li>
           <li class="ml-10">
@@ -325,29 +455,37 @@
           </div>
           <div class="bg-white p-6 rounded-lg shadow">
             <img
-              src="./css/img/shisir_pokharel.png"
-              alt="Shisir Pokharel"
+              src="./css/img/hemant_tandon.png"
+              alt="Hemant Tandon Chhetri"
               class="w-32 h-35 rounded-full mb-4 mx-auto"
             />
             <h3 class="text-lg font-semibold text-blue-900">
-              Member: Shisir Pokharel
+              Member: Hemant Tandon Chhetri
             </h3>
             <p class="text-gray-600">CEO, Hamro Pay</p>
             <p class="text-sm text-gray-600" style="text-align: justify">
-              Shisir Pokharel is the Chief Executive Officer of Hamro Pay and a
-              Chartered Accountant with a distinguished track record in
-              financial strategy, risk advisory, and corporate governance across
-              the financial services and technology sectors. He also serves as
-              the Director of Finance at Hamro Patro, Inc., where he oversees
-              financial planning, regulatory compliance, and risk management for
-              one of Nepal’s leading digital platforms. With deep expertise in
-              financial analysis and strategic leadership, Mr. Pokharel is
-              instrumental in driving sustainable growth, operational
-              efficiency, and innovation in Nepal’s rapidly evolving fintech
-              landscape.
+              Hemant Tandon Chhetri, the CEO of Hamro Pay, has a diverse
+              professional background. He began as a professional graphic
+              designer before transitioning to the banking sector, where he held
+              leadership roles like Head of Legal, Compliance, and Recovery at
+              Samriddhi Finance Limited, and Chief Legal Officer at NIC Asia
+              Microfinance Limited. Academically, he holds an M.Phil. in
+              Management (Human Resources), an MBS with a focus on Marketing
+              Research and Global Marketing from T.U., and an LLB with an
+              advocate license, making him a recognized banking/corporate
+              advocate. He is currently pursuing a Master's in Mass
+              Communication and Journalism at Tribhuvan University and also
+              lectures in Management at Himalayan White House College and
+              Pushpalal Memorial College, in addition to leading the Head of
+              Research Department and Thesis Supervisor for MBS at Samata
+              College.In addition to his other roles, he contributes to Nepalese
+              literature as a writer and editor. His works, published by Mega
+              Publication and Research Centre, include "District Profile of
+              Nepal," "National Profile of Nepal," "Municipality Profile of
+              Nepal," and "National Policies of Nepal."
             </p>
             <a
-              href="https://www.linkedin.com/in/shisir-pokharel-97048355/"
+              href="https://www.linkedin.com/in/hemant-tandon-chhetri-bbbb14151/"
               class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
               >LinkedIn Profile</a
             >
@@ -439,6 +577,30 @@
             </p>
             <a
               href="https://www.linkedin.com/in/bikky-shahi-78b801240/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >LinkedIn Profile</a
+            >
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <img
+              src="./css/img/pratap_adhikari.png"
+              alt="Pratap Adhikari"
+              class="w-32 h-32 rounded-full mb-4 mx-auto"
+            />
+            <h3 class="text-lg font-semibold text-blue-900">
+              Advocate Member: Pratap Adhikari
+            </h3>
+            <p class="text-gray-600">
+              Legal and Policy Advisor, PSP Association
+            </p>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              Pratap Adhikari is Legal and Policy Advisor at the PSP
+              Association, where he plays a crucial role in shaping the legal
+              and regulatory.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/pratap-adhikari-0b360417b/"
               class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
               >LinkedIn Profile</a
             >
