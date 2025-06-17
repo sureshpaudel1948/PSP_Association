@@ -27,11 +27,11 @@ body::before {
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(
-    45deg,
+    105deg,
     rgba(255, 255, 255, 0.29),
     /* Semi-transparent white for wave effect */ rgba(255, 255, 255, 0.1) 10px,
     transparent 20px,
-    transparent 120px
+    transparent 110px
   ); /* Creates a subtle diagonal wave pattern */
   opacity: 0.3; /* Low opacity for subtlety */
   z-index: -1; /* Place behind content */
@@ -74,8 +74,9 @@ input:invalid:focus {
   }
 }
 
-footer a {
+footer a, p {
   transition: color 0.3s ease;
+  font-size: 0.8em;
 }
 
 .member .memb-logo {
