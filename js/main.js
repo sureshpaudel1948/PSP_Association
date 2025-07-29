@@ -9,6 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Dropdown Toggle for About 
+const aboutDropdownToggle = document.getElementById("about-dropdown-toggle");
+const aboutDropdownMenu = document.getElementById("about-dropdown");
+
+if (aboutDropdownToggle && aboutDropdownMenu) {
+  aboutDropdownToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    aboutDropdownMenu.classList.toggle("hidden");
+    aboutDropdownToggle.setAttribute(
+      "aria-expanded",
+      !aboutDropdownMenu.classList.contains("hidden")
+    );
+  });
+}
+
   // Dropdown Toggle for Resources
   const resourcesDropdownToggle = document.getElementById(
     "resources-dropdown-toggle"
