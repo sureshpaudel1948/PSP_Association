@@ -32,11 +32,59 @@
               >Home</a
             >
           </li>
-          <li>
-            <a href="about.html" class="text-blue-600 hover:text-blue-800"
-              >About</a
-            >
-          </li>
+         <li class="relative group">
+  <a
+    href="about.html"
+    class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+    aria-haspopup="true"
+    aria-expanded="false"
+    id="about-dropdown-toggle"
+  >
+    About
+    <svg
+      class="ml-1 w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      ></path>
+    </svg>
+  </a>
+  <ul
+    class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+    id="about-dropdown"
+    role="menu"
+  >
+    <li>
+      <a
+        href="about.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >About Us</a>
+    </li>
+    <li>
+      <a
+        href="executive.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >Executive Committee</a>
+    </li>
+    <li>
+      <a
+        href="member.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >Member Wallets</a>
+    </li>
+  </ul>
+</li>
+
           <li>
             <a
               href="events.html"
