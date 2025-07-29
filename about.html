@@ -35,11 +35,59 @@
               >Home</a
             >
           </li>
-          <li>
-            <a href="about.html" class="text-blue-600 hover:text-blue-800"
-              >About</a
-            >
-          </li>
+          <li class="relative group">
+  <a
+    href="about.html"
+    class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+    aria-haspopup="true"
+    aria-expanded="false"
+    id="about-dropdown-toggle"
+  >
+    About
+    <svg
+      class="ml-1 w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      ></path>
+    </svg>
+  </a>
+  <ul
+    class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+    id="about-dropdown"
+    role="menu"
+  >
+    <li>
+      <a
+        href="about.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >About Us</a>
+    </li>
+    <li>
+      <a
+        href="executive.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >Executive Committee</a>
+    </li>
+    <li>
+      <a
+        href="member.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >Member Wallets</a>
+    </li>
+  </ul>
+</li>
+
           <li>
             <a href="events.html" class="text-blue-600 hover:text-blue-800"
               >Events</a
@@ -293,534 +341,7 @@
         </p>
       </section>
 
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
-          Executive Committee
-        </h2>
-        <p class="text-gray-700 mb-6 max-w-2xl">
-          Our dedicated Executive Committee drives the PSP Association’s
-          strategic vision, representing the diverse interests of our global
-          members.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/praveen_regmi.png"
-              alt="Praveen Regmi"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Founding President: Praveen Regmi
-            </h3>
-            <p class="text-gray-600">Director, Khalti by IME</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              With a solid background in IT infrastructure and network
-              administration, Praveen Regmi is an experienced and results-driven
-              professional focused on optimizing system performance and ensuring
-              reliable, secure operations. His technical expertise includes
-              network security, server management, and cloud-based solutions,
-              positioning him as a valuable asset for troubleshooting, systems
-              maintenance, and technical support. Praveen is committed to
-              continuous professional development and is actively engaged in
-              exploring emerging technologies to drive operational efficiency.
-              Known for his proactive approach and collaborative mindset, he is
-              open to connecting with industry peers, mentors, and organizations
-              seeking to enhance their IT capabilities through innovative and
-              practical technology solutions.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/praveen-regmi%F0%9F%87%B3%F0%9F%87%B5-2510a4a4/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/binay_khadka.png"
-              alt="Binay Khadka"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              President: Binay Khadka
-            </h3>
-            <p class="text-gray-600">CEO, Khalti by IME</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Binay Khadka is a qualified Chartered Accountant and the Chief
-              Executive Officer of Khalti, a leading digital wallet and payment
-              service provider in Nepal. With a strong foundation in finance and
-              strategic leadership, he has played a pivotal role in accelerating
-              Khalti’s growth in the digital payments ecosystem. Prior to this
-              role, he held key positions including Head of Banks and Corporate
-              Relations at eSewa and Head of Digital Marketing at NIC Asia Bank,
-              following his initial tenure as a Financial Analyst at the same
-              institution. Mr. Khadka was the national topper in the Chartered
-              Accountancy final examinations in 2017, receiving three gold
-              medals from ICAN. His career reflects a deep commitment to
-              advancing digital financial inclusion and fostering innovation in
-              Nepal’s fintech landscape.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/binay-khadka-100485b9/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/shreesh_poudel.png"
-              alt="Shreesh Poudel"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Vice-President: Shreesh Poudel
-            </h3>
-            <p class="text-gray-600">CEO, MORU Wallet</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Shreesh Poudel is a seasoned executive with extensive experience
-              in the fintech sector. He currently serves as the Chief Executive
-              Officer at Moru Digital Wallet, where he leads strategic
-              initiatives to drive innovation and financial inclusion. Prior to
-              this role, Shreesh held key positions such as Head of Business and
-              Operations, Head of Finance, and Head of Operations, showcasing
-              his versatility and leadership across various domains. His
-              commitment to the digital transformation of financial services is
-              further evidenced by his role as Secretary of the Digital ACAN
-              Committee.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/cashreesh/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/binay_regmi.png"
-              alt="Binay Regmi"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Secretary: Binay Regmi
-            </h3>
-            <p class="text-gray-600">CEO, CityPay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Binay Regmi is the Chief Executive Officer of CityPAY, a leading
-              digital payment platform in Nepal, where he spearheads strategic
-              initiatives to advance urban financial solutions through digital
-              innovation. With expertise in digital strategy, negotiation, and
-              analytical skills, he has been instrumental in expanding the reach
-              of digital wallets and remittance services across the country. As
-              the Founding General Secretary of the PSP Association Nepal, Mr.
-              Regmi actively contributes to shaping the nation's digital payment
-              ecosystem. His thought leadership is reflected in his published
-              work on Nepal’s payment systems, featured in the NAFIJ Journal,
-              underscoring his commitment to enhancing financial inclusion and
-              technological advancement in the region.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/binay-regmi-4572671a/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/manoj_mehta.png"
-              alt="Manoj Mehta"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Treasurer: Manoj Mehta
-            </h3>
-            <p class="text-gray-600">CEO, MyPay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Manoj Mehta is the Chief Executive Officer of MyPay and the
-              Treasurer of the PSP Association Nepal, bringing extensive
-              expertise in fintech, cross-border payments, and digital
-              remittances. A qualified Chartered Accountant, he has played a
-              pivotal role in strengthening Nepal’s digital payment ecosystem
-              through strategic leadership, regulatory alignment, and financial
-              innovation. His career spans advisory roles and industry
-              engagement, making him a recognized authority in digital finance
-              and compliance. Mr. Mehta is also known for his thought leadership
-              on leveraging technology to address systemic challenges, including
-              those amplified by the COVID-19 pandemic. Committed to financial
-              inclusion and sustainable digital growth, he continues to
-              contribute meaningfully to Nepal’s evolving fintech landscape.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/camanojmehta/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/niraj_shukla.png"
-              alt="Niraj Shukla"
-              class="w-34 h-36 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Member: Niraj Shukla
-            </h3>
-            <p class="text-gray-600">CEO, Cell Pay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Niraj Shukla is an experienced fintech and digital banking
-              professional with over 12 years of expertise in software
-              engineering and product innovation. He currently serves as the CEO
-              of CellPay, a leading digital payment platform in Nepal, and as
-              the Tech Lead and Principal Engineer at Poshvine. With deep
-              expertise in digital banking platforms, mobile payments, and
-              scalable system architecture, he is known for building
-              high-performance solutions that drive financial inclusion. Niraj
-              is passionate about leveraging technology to transform financial
-              services and deliver impactful digital innovation.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/nirajkshukla/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/hemant_tandon.png"
-              alt="Hemant Tandon Chhetri"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Member: Hemant Tandon Chhetri
-            </h3>
-            <p class="text-gray-600">CEO, Hamro Pay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Hemant Tandon Chhetri, the CEO of Hamro Pay, has a diverse
-              professional background. He began as a professional graphic
-              designer before transitioning to the banking sector, where he held
-              leadership roles like Head of Legal, Compliance, and Recovery at
-              Samriddhi Finance Limited, and Chief Legal Officer at NIC Asia
-              Microfinance Limited. Academically, he holds an M.Phil. in
-              Management (Human Resources), an MBS with a focus on Marketing
-              Research and Global Marketing from T.U., and an LLB with an
-              advocate license, making him a recognized banking/corporate
-              advocate. He is currently pursuing a Master's in Mass
-              Communication and Journalism at Tribhuvan University and also
-              lectures in Management at Himalayan White House College and
-              Pushpalal Memorial College, in addition to leading the Head of
-              Research Department and Thesis Supervisor for MBS at Samata
-              College.In addition to his other roles, he contributes to Nepalese
-              literature as a writer and editor. His works, published by Mega
-              Publication and Research Centre, include "District Profile of
-              Nepal," "National Profile of Nepal," "Municipality Profile of
-              Nepal," and "National Policies of Nepal."
-            </p>
-            <a
-              href="https://www.linkedin.com/in/hemant-tandon-chhetri-bbbb14151/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/pranaya_bhandari.png"
-              alt="Pranaya Rajbhandari"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Member: Pranaya Rajbhandari
-            </h3>
-            <p class="text-gray-600">CEO, MOCO</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Pranaya Rajbhandari is the Chief Executive Officer and Co-Founder
-              of FOCUSONE Payment Solutions, the company behind Nepal's
-              innovative digital wallet platform, MOCO. Under his leadership,
-              MOCO has introduced Nepal’s first unified QR code system, enabling
-              seamless cross-border payments through global networks like
-              Alipay+, UnionPay, Visa, and NepalPay. This initiative has
-              positioned MOCO as a key player in Nepal’s digital payments
-              ecosystem, facilitating cardless transactions and empowering
-              businesses to engage with international customers. Mr. Rajbhandari
-              is also a founding member of the PSP Association Nepal,
-              contributing to the development of regulatory frameworks and
-              industry standards that support the growth of digital financial
-              services in the country.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/pranaya-rajbhandari-79a2b211/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/bikki_shahi.png"
-              alt="Bikki Shahi"
-              class="w-35 h-32 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Member: Bikki Shahi
-            </h3>
-            <p class="text-gray-600">CEO, Prabhu Pay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Bikki Shahi is the Chief Executive Officer of Prabhu Pay, a
-              leading digital wallet in Nepal. With a strong background in IT
-              infrastructure and network administration, he focuses on
-              optimizing system performance and ensuring reliable, secure
-              operations. His technical expertise includes network security,
-              server management, and cloud-based solutions, positioning him as a
-              valuable asset for troubleshooting, systems maintenance, and
-              technical support. Bikki is committed to continuous professional
-              development and actively engages in exploring emerging
-              technologies to drive operational efficiency. Known for his
-              proactive approach and collaborative mindset, he connects with
-              industry peers and organizations to enhance IT capabilities
-              through innovative and practical technology solutions.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/bikky-shahi-78b801240/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./css/img/pratap_adhikari.png"
-              alt="Pratap Adhikari"
-              class="w-32 h-32 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">Pratap Adhikari</h3>
-            <p class="text-gray-600">
-              Legal and Policy Advisor, PSP Association
-            </p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Legal and Policy Advisor,
-Pratap Adhikari is a strategic legal and policy advisor specializing in payment systems, digital finance, and regulatory frameworks. At PSP Association, he leverages his expertise in financial regulations, blockchain technology, and compliance to advance the digital wallet industry's interests across APAC and global markets. With a Master of Laws (LLM) in International Business Law and extensive experience in corporate law and tech policy, Pratap navigates complex regulatory landscapes while advocating for innovation-friendly policies that balance security, consumer protection, and industry growth.
-His work encompasses shaping regulatory standards for digital payments and fintech, advising on cross-border compliance and risk mitigation, and driving policy initiatives to foster financial inclusion. Pratap is recognized for his thought leadership at the intersection of law, technology, and finance, actively collaborating with regulators, industry stakeholders, and policymakers to analyze emerging trends in blockchain and digital assets. Through his strategic guidance, he helps build resilient frameworks that support the future of digital transactions while ensuring sustainable industry development.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/pratap-adhikari-0b360417b/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
-          Member Organizations
-        </h2>
-        <p class="text-gray-700 mb-6 max-w-2xl">
-          Our member organizations are leading payment service providers in
-          Nepal, driving innovation and financial inclusion through secure and
-          accessible digital payment solutions.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow member">
-            <div class="memb-logo">
-              <img
-                src="./css/img/cell_pay.png"
-                class="mem_logo"
-                alt="Cell Pay"
-              />
-            </div>
-
-            <h3 class="text-lg font-semibold text-blue-900">Cell Pay</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              CellPay is a Nepal Rastra Bank licensed Payment Service Provider
-              providing both bank link and wallet facility from the same app.
-              CellPay is a mobile application that has been uniquely placed with
-              a dual feature of a digital wallet and a bank link facility,
-              easing customer needs.
-            </p>
-            <a
-              href="https://www.cellpay.com.np/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-          <div class="bg-white p-6 round-lg shadow member">
-            <div class="memb-logo">
-              <img
-                src="./css/img/city_pay.png"
-                class="mem_logo"
-                alt="CityPay"
-              />
-            </div>
-
-            <h3 class="text-lg font-semibold text-blue-900">CityPay</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              CityPay is a licensed digital wallet in Nepal, developed by City
-              Wallet Pvt. Ltd. and promoted by City Express. It offers secure
-              mobile payments, utility bill services, remittance payouts, and QR
-              transactions, aiming to enhance financial accessibility and
-              convenience nationwide.
-            </p>
-            <a
-              href="https://citywallet.com.np/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-          <div class="bg-white p-6 round-lg shadow member">
-            <div class="memb-logo">
-              <img
-                src="./css/img/hamro_pay.png"
-                class="mem_logo"
-                alt="HamroPay"
-              />
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900">Hamro Pay</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Hamro Pay is a licensed digital wallet launched by Hamro Patro to
-              provide secure and convenient digital payment services in Nepal.
-              It offers mobile top-ups, utility bill payments, remittance, and
-              QR-based transactions. Backed by Nepal Rastra Bank, Hamro Pay aims
-              to promote financial inclusion through innovative and accessible
-              digital solutions.
-            </p>
-            <a
-              href="https://www.hamropay.com/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-          
-          <div class="bg-white p-6 round-lg shadow member">
-            <div class="memb-logo">
-              <img
-                src="./css/img/khaltiIME.png"
-                class="mem_logo"
-                alt="KhaltiPay"
-              />
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900">Khalti by IME</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Khalti is a licensed digital wallet and payment gateway in Nepal,
-              offering a wide range of online services including mobile top-ups,
-              utility bill payments, domestic flight bookings, and event
-              ticketing. Launched in 2017, it has become a trusted platform for
-              over 15 million users nationwide. Khalti is authorized by Nepal
-              Rastra Bank and is committed to promoting financial inclusion
-              through secure and user-friendly digital solutions.
-            </p>
-            <a
-              href="https://khaltibyime.khalti.com/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-          <div class="bg-white p-6 round-lg shadow member">
-            <div class="memb-logo">
-              <img src="./css/img/moco_pay.png" class="mem_logo" alt="MOCO" />
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900">MOCO</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              MOCO is a licensed digital wallet in Nepal by FOCUSONE Payment
-              Solutions, offering seamless in-app and QR payments by linking
-              multiple Visa and Mastercard cards. It supports utility bill
-              payments, mobile top-ups, flight bookings, and cross-border
-              transactions through its unified QR code system, integrating
-              networks like Alipay+, UnionPay, and NEPALPAY.
-            </p>
-            <a
-              href="https://moco.com.np/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-          <div class="bg-white p-6 round-lg shadow member">
-            <div class="memb-logo">
-              <img src="./css/img/moru.png" class="mem_logo" alt="Moru" />
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900">Moru</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              Moru is a licensed digital wallet in Nepal offering services like
-              mobile top-ups, bill payments, flight bookings, and QR
-              transactions. It supports bank transfers and card loading,
-              providing cashback and 24/7 support. Authorized by Nepal Rastra
-              Bank, Moru promotes digital payments and financial inclusion.
-            </p>
-            <a
-              href="https://moru.com.np/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-          <div class="bg-white p-6 round-lg shadow member">
-            <div class="memb-logo">
-              <img src="./css/img/my_pay.png" class="mem_logo" alt="MyPay" />
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900">MyPay</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              MyPay is a licensed digital wallet in Nepal, developed by Smart
-              Card Nepal Pvt. Ltd., offering secure and convenient financial
-              services. Users can perform mobile top-ups, utility bill payments,
-              fund transfers, and book travel tickets, including bus and cable
-              car reservations. MyPay also facilitates DEMAT renewals,
-              remittance services, and government payments, aiming to enhance
-              digital financial inclusion across the country.
-            </p>
-            <a
-              href="https://mypay.com.np/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-          <div class="bg-white p-6 round-lg shadow member">
-            <div class="memb-logo">
-              <img
-                src="./css/img/prabhu_pay.png"
-                class="mem_logo"
-                alt="PrabhuPay"
-              />
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900">Prabhu Pay</h3>
-            <p class="text-sm text-gray-600" style="text-align: justify">
-              PrabhuPAY is a licensed digital wallet in Nepal, developed by
-              Prabhu Technology Pvt. Ltd., offering a wide range of financial
-              services including utility bill payments, fund transfers, ticket
-              bookings, and remittance. With features like QR payments, bank
-              linking, and cashback rewards, it simplifies everyday transactions
-              for users across the country.
-            </p>
-            <a
-              href="https://www.prabhupay.com/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Visit Website</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-blue-50 p-8 rounded-lg mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-4">Membership</h2>
-        <p class="text-gray-700 mb-6 max-w-2xl">
-          Open to banks, fintech companies, and payment processors, PSP
-          Association membership offers exclusive resources, networking
-          opportunities, and advocacy to advance your organization.
-        </p>
-        <a
-          href="membership.html"
-          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
-          >Join Now</a
-        >
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-semibold text-blue-900 mb-4">
-          Associated Organizations
-        </h2>
-        <p class="text-black max-w-2xl">
-          We collaborate with regulatory bodies, industry groups, and technology
-          providers to ensure a secure, innovative, and efficient payment
-          ecosystem worldwide.
-        </p>
-      </section>
+    
     </main>
 
     <footer class="bg-blue-900 text-white py-8">
