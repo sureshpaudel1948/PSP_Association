@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About PSP Association</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="css/img/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-blue-900">
+          <a href="index.html">
+            <img
+              src="css/img/logo.png"
+              alt="PSP Association Logo"
+              class="h-20 w-auto"
+              style="margin: 0; padding: 0"
+            />
+          </a>
+        </div>
+        <ul class="flex space-x-6 items-center">
+          <li>
+            <a
+              href="index.html"
+              class="text-blue-600 hover:text-blue-800"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="relative group">
+  <a
+    href="about.html"
+    class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+    aria-haspopup="true"
+    aria-expanded="false"
+    id="about-dropdown-toggle"
+  >
+    About
+    <svg
+      class="ml-1 w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      ></path>
+    </svg>
+  </a>
+  <ul
+    class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+    id="about-dropdown"
+    role="menu"
+  >
+    <li>
+      <a
+        href="about.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >About Us</a>
+    </li>
+    <li>
+      <a
+        href="executive.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >Executive Committee</a>
+    </li>
+    <li>
+      <a
+        href="member.html"
+        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+        role="menuitem"
+      >Member Wallets</a>
+    </li>
+  </ul>
+</li>
+
+          <li>
+            <a href="events.html" class="text-blue-600 hover:text-blue-800"
+              >Events</a
+            >
+          </li>
+          <li class="relative">
+            <a
+              href="media.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="media-dropdown-toggle"
+              >Media
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="media-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="media.html#notice"
+                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Notice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#newsletter"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Newsletter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#blogs"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#publications"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Publications</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#gallery"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a
+              href="resources.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="resources-dropdown-toggle"
+              >Resources
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="resources-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="resources.html#legislation"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Legislation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#directives"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Directives and Guidelines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#bylaws"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Bylaws</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#policies"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Policies and Strategies</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
+              >Advocacy</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#contact"
+              class="text-blue-600 hover:text-blue-800"
+              >Contact</a
+            >
+          </li>
+          <li class="ml-10">
+            <a
+              href="membership.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >Become a Member</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+          Member Organizations
+        </h2>
+        <p class="text-gray-700 mb-6 max-w-2xl">
+          Our member organizations are leading payment service providers in
+          Nepal, driving innovation and financial inclusion through secure and
+          accessible digital payment solutions.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow member">
+            <div class="memb-logo">
+              <img
+                src="./css/img/cell_pay.png"
+                class="mem_logo"
+                alt="Cell Pay"
+              />
+            </div>
+
+            <h3 class="text-lg font-semibold text-blue-900">Cell Pay</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              CellPay is a Nepal Rastra Bank licensed Payment Service Provider
+              providing both bank link and wallet facility from the same app.
+              CellPay is a mobile application that has been uniquely placed with
+              a dual feature of a digital wallet and a bank link facility,
+              easing customer needs.
+            </p>
+            <a
+              href="https://www.cellpay.com.np/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+          <div class="bg-white p-6 round-lg shadow member">
+            <div class="memb-logo">
+              <img
+                src="./css/img/city_pay.png"
+                class="mem_logo"
+                alt="CityPay"
+              />
+            </div>
+
+            <h3 class="text-lg font-semibold text-blue-900">CityPay</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              CityPay is a licensed digital wallet in Nepal, developed by City
+              Wallet Pvt. Ltd. and promoted by City Express. It offers secure
+              mobile payments, utility bill services, remittance payouts, and QR
+              transactions, aiming to enhance financial accessibility and
+              convenience nationwide.
+            </p>
+            <a
+              href="https://citywallet.com.np/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+          <div class="bg-white p-6 round-lg shadow member">
+            <div class="memb-logo">
+              <img
+                src="./css/img/hamro_pay.png"
+                class="mem_logo"
+                alt="HamroPay"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900">Hamro Pay</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              Hamro Pay is a licensed digital wallet launched by Hamro Patro to
+              provide secure and convenient digital payment services in Nepal.
+              It offers mobile top-ups, utility bill payments, remittance, and
+              QR-based transactions. Backed by Nepal Rastra Bank, Hamro Pay aims
+              to promote financial inclusion through innovative and accessible
+              digital solutions.
+            </p>
+            <a
+              href="https://www.hamropay.com/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+          
+          <div class="bg-white p-6 round-lg shadow member">
+            <div class="memb-logo">
+              <img
+                src="./css/img/khaltiIME.png"
+                class="mem_logo"
+                alt="KhaltiPay"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900">Khalti by IME</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              Khalti is a licensed digital wallet and payment gateway in Nepal,
+              offering a wide range of online services including mobile top-ups,
+              utility bill payments, domestic flight bookings, and event
+              ticketing. Launched in 2017, it has become a trusted platform for
+              over 15 million users nationwide. Khalti is authorized by Nepal
+              Rastra Bank and is committed to promoting financial inclusion
+              through secure and user-friendly digital solutions.
+            </p>
+            <a
+              href="https://khaltibyime.khalti.com/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+          <div class="bg-white p-6 round-lg shadow member">
+            <div class="memb-logo">
+              <img src="./css/img/moco_pay.png" class="mem_logo" alt="MOCO" />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900">MOCO</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              MOCO is a licensed digital wallet in Nepal by FOCUSONE Payment
+              Solutions, offering seamless in-app and QR payments by linking
+              multiple Visa and Mastercard cards. It supports utility bill
+              payments, mobile top-ups, flight bookings, and cross-border
+              transactions through its unified QR code system, integrating
+              networks like Alipay+, UnionPay, and NEPALPAY.
+            </p>
+            <a
+              href="https://moco.com.np/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+          <div class="bg-white p-6 round-lg shadow member">
+            <div class="memb-logo">
+              <img src="./css/img/moru.png" class="mem_logo" alt="Moru" />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900">Moru</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              Moru is a licensed digital wallet in Nepal offering services like
+              mobile top-ups, bill payments, flight bookings, and QR
+              transactions. It supports bank transfers and card loading,
+              providing cashback and 24/7 support. Authorized by Nepal Rastra
+              Bank, Moru promotes digital payments and financial inclusion.
+            </p>
+            <a
+              href="https://moru.com.np/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+          <div class="bg-white p-6 round-lg shadow member">
+            <div class="memb-logo">
+              <img src="./css/img/my_pay.png" class="mem_logo" alt="MyPay" />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900">MyPay</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              MyPay is a licensed digital wallet in Nepal, developed by Smart
+              Card Nepal Pvt. Ltd., offering secure and convenient financial
+              services. Users can perform mobile top-ups, utility bill payments,
+              fund transfers, and book travel tickets, including bus and cable
+              car reservations. MyPay also facilitates DEMAT renewals,
+              remittance services, and government payments, aiming to enhance
+              digital financial inclusion across the country.
+            </p>
+            <a
+              href="https://mypay.com.np/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+          <div class="bg-white p-6 round-lg shadow member">
+            <div class="memb-logo">
+              <img
+                src="./css/img/prabhu_pay.png"
+                class="mem_logo"
+                alt="PrabhuPay"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900">Prabhu Pay</h3>
+            <p class="text-sm text-gray-600" style="text-align: justify">
+              PrabhuPAY is a licensed digital wallet in Nepal, developed by
+              Prabhu Technology Pvt. Ltd., offering a wide range of financial
+              services including utility bill payments, fund transfers, ticket
+              bookings, and remittance. With features like QR payments, bank
+              linking, and cashback rewards, it simplifies everyday transactions
+              for users across the country.
+            </p>
+            <a
+              href="https://www.prabhupay.com/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              >Visit Website</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-blue-50 p-8 rounded-lg mb-12">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-4">Membership</h2>
+        <p class="text-gray-700 mb-6 max-w-2xl">
+          Open to banks, fintech companies, and payment processors, PSP
+          Association membership offers exclusive resources, networking
+          opportunities, and advocacy to advance your organization.
+        </p>
+        <a
+          href="membership.html"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+          >Join Now</a
+        >
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-blue-900 mb-4">
+          Associated Organizations
+        </h2>
+        <p class="text-black max-w-2xl">
+          We collaborate with regulatory bodies, industry groups, and technology
+          providers to ensure a secure, innovative, and efficient payment
+          ecosystem worldwide.
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
+            <p class="text-gray-300">
+              Empowering professionals with resources, events, and community
+              support for PSP excellence.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="events.html" class="text-gray-300 hover:text-white"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="advocacy.html" class="text-gray-300 hover:text-white"
+                  >Advocacy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-300">Email: pspa.nepal@gmail.com</p>
+            <p class="text-gray-300">Phone: (+977) 9866008482</p>
+            <p class="text-gray-300">Address: Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-300 text-xs">
+          © 2025 PSP Association. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
