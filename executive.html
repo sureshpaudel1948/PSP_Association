@@ -1,278 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About PSP Association</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="assets/img/logo.png" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow">
-      <nav
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <div class="text-2xl font-bold text-blue-900">
-          <a href="index.html">
-            <img
-              src="assets/img/logo.png"
-              alt="PSP Association Logo"
-              class="h-20 w-auto"
-              style="margin: 0; padding: 0"
-            />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PSP Association</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-900">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="PSP Association Logo" class="h-20 w-auto" style="margin: 0; padding: 0" />
+        </a>
+      </div>
+      <ul class="flex space-x-6 items-center">
+        <li>
+          <a href="index.html" class="text-blue-600 hover:text-blue-800" aria-current="page">Home</a>
+        </li>
+        <li class="relative group">
+          <a href="about.html" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+            aria-haspopup="true" aria-expanded="false" id="about-dropdown-toggle">
+            About
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
           </a>
-        </div>
-        <ul class="flex space-x-6 items-center">
-          <li>
-            <a
-              href="index.html"
-              class="text-blue-600 hover:text-blue-800"
-              aria-current="page"
-              >Home</a
-            >
-          </li>
-         <li class="relative group">
-  <a
-    href="about.html"
-    class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-    aria-haspopup="true"
-    aria-expanded="false"
-    id="about-dropdown-toggle"
-  >
-    About
-    <svg
-      class="ml-1 w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M19 9l-7 7-7-7"
-      ></path>
-    </svg>
-  </a>
-  <ul
-    class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
-    id="about-dropdown"
-    role="menu"
-  >
-    <li>
-      <a
-        href="about.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >About Us</a>
-    </li>
-    <li>
-      <a
-        href="executive.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >Executive Committee</a>
-    </li>
-    <li>
-      <a
-        href="member.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >Member Wallets</a>
-    </li>
-  </ul>
-</li>
+          <ul class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10" id="about-dropdown"
+            role="menu">
+            <li>
+              <a href="about.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">About Us</a>
+            </li>
+            <li>
+              <a href="executive.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Executive Committee</a>
+            </li>
+            <li>
+              <a href="member.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Member Wallets</a>
+            </li>
+          </ul>
+        </li>
 
-          <li>
-            <a href="events.html" class="text-blue-600 hover:text-blue-800"
-              >Events</a
-            >
-          </li>
-          <li class="relative">
-            <a
-              href="media.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-              aria-current="page"
-              aria-haspopup="true"
-              aria-expanded="false"
-              id="media-dropdown-toggle"
-              >Media
-              <svg
-                class="ml-1 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </a>
-            <ul
-              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
-              id="media-dropdown"
-              role="menu"
-            >
-              <li>
-                <a
-                  href="media.html#notice"
-                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Notice</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#newsletter"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Newsletter</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#blogs"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Blogs</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#publications"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Publications</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#gallery"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Gallery</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="relative group">
-            <a
-              href="resources.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-              aria-current="page"
-              aria-haspopup="true"
-              aria-expanded="false"
-              id="resources-dropdown-toggle"
-              >Resources
-              <svg
-                class="ml-1 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </a>
-            <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
-              id="resources-dropdown"
-              role="menu"
-            >
-              <li>
-                <a
-                  href="resources.html#legislation"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Legislation</a
-                >
-              </li>
-              <li>
-                <a
-                  href="resources.html#directives"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Directives and Guidelines</a
-                >
-              </li>
-              <li>
-                <a
-                  href="resources.html#bylaws"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Bylaws</a
-                >
-              </li>
-              <li>
-                <a
-                  href="resources.html#policies"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Policies and Strategies</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
-              >Advocacy</a
-            >
-          </li>
-          <li>
-            <a
-              href="index.html#contact"
-              class="text-blue-600 hover:text-blue-800"
-              >Contact</a
-            >
-          </li>
-          <li class="ml-10">
-            <a
-              href="membership.html"
-              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-              >Become a Member</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <li>
+          <a href="events.html" class="text-blue-600 hover:text-blue-800">Events</a>
+        </li>
+        <li class="relative">
+          <a href="media.html" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+            aria-current="page" aria-haspopup="true" aria-expanded="false" id="media-dropdown-toggle">Media
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <ul class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10" id="media-dropdown" role="menu">
+            <li>
+              <a href="media.html#notice" class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Notice</a>
+            </li>
+            <li>
+              <a href="media.html#newsletter" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Newsletter</a>
+            </li>
+            <li>
+              <a href="media.html#blogs" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Blogs</a>
+            </li>
+            <li>
+              <a href="media.html#publications"
+                class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Publications</a>
+            </li>
+            <li>
+              <a href="media.html#gallery" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Gallery</a>
+            </li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="resources.html" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+            aria-current="page" aria-haspopup="true" aria-expanded="false" id="resources-dropdown-toggle">Resources
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <ul class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+            id="resources-dropdown" role="menu">
+            <li>
+              <a href="resources.html#legislation"
+                class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Legislation</a>
+            </li>
+            <li>
+              <a href="resources.html#directives"
+                class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800" role="menuitem">Directives
+                and Guidelines</a>
+            </li>
+            <li>
+              <a href="resources.html#bylaws" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                role="menuitem">Bylaws</a>
+            </li>
+            <li>
+              <a href="resources.html#policies"
+                class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800" role="menuitem">Policies and
+                Strategies</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="advocacy.html" class="text-blue-600 hover:text-blue-800">Advocacy</a>
+        </li>
+        <li>
+          <a href="index.html#contact" class="text-blue-600 hover:text-blue-800">Contact</a>
+        </li>
+        <li class="ml-10">
+          <a href="membership.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Collaborate With
+            Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="container mx-auto px-4 py-12">
-      
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
-          Executive Committee
-        </h2>
-        <p class="text-gray-700 mb-6 max-w-2xl">
-          Our dedicated Executive Committee drives the PSP Association’s
-          strategic vision, representing the diverse interests of our global
-          members.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/praveen_regmi.png"
-              alt="Praveen Regmi"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Founding President: Praveen Regmi
-            </h3>
-            <p class="text-gray-600">Director, Khalti by IME</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+  <main class="container mx-auto px-4 py-12">
+
+    <section class="mb-12 ">
+      <h2 class="text-2xl font-semibold text-blue-900 mb-6 text-center">
+        Executive Committee
+      </h2>
+      <p class="text-gray-700 mb-6 max-w-2xl mx-auto text-center">
+        Our dedicated Executive Committee drives the PSP Association’s
+        strategic vision, representing the diverse interests of our global
+        members.
+      </p>
+
+      <div class="space-y-10">
+        <!-- Member 1 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+          <div class="flex-shrink-0">
+            <img src="./assets/img/praveen_regmi.png" alt="Praveen Regmi"
+              class="w-40 h-40 rounded-full object-cover mx-auto md:mx-0" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">Founding President: Praveen Regmi</h3>
+            <p class="text-gray-600 mb-4">Director, Khalti by IME</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               With a solid background in IT infrastructure and network
               administration, Praveen Regmi is an experienced and results-driven
               professional focused on optimizing system performance and ensuring
@@ -287,23 +165,21 @@
               seeking to enhance their IT capabilities through innovative and
               practical technology solutions.
             </p>
-            <a
-              href="https://www.linkedin.com/in/praveen-regmi%F0%9F%87%B3%F0%9F%87%B5-2510a4a4/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/praveen-regmi%F0%9F%87%B3%F0%9F%87%B5-2510a4a4/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/binay_khadka.png"
-              alt="Binay Khadka"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              President: Binay Khadka
-            </h3>
-            <p class="text-gray-600">CEO, Khalti by IME</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+        </div>
+
+        <!-- Member 2 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+          <div class="flex-shrink-0">
+            <img src="./assets/img/binay_khadka.png" alt="Binay Khadka"
+              class="w-40 h-40 rounded-full object-cover mx-auto md:mx-0" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">President: Binay Khadka</h3>
+            <p class="text-gray-600 mb-4">CEO, Khalti by IME</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Binay Khadka is a qualified Chartered Accountant and the Chief
               Executive Officer of Khalti, a leading digital wallet and payment
               service provider in Nepal. With a strong foundation in finance and
@@ -318,23 +194,21 @@
               advancing digital financial inclusion and fostering innovation in
               Nepal’s fintech landscape.
             </p>
-            <a
-              href="https://www.linkedin.com/in/binay-khadka-100485b9/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/binay-khadka-100485b9/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/shreesh_poudel.png"
-              alt="Shreesh Poudel"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
-              Vice-President: Shreesh Poudel
-            </h3>
-            <p class="text-gray-600">CEO, MORU Wallet</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+        </div>
+
+        <!-- Member 3 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+          <div class="flex-shrink-0">
+            <img src="./assets/img/shreesh_poudel.png" alt="Shreesh Poudel"
+              class="w-40 h-40 rounded-full object-cover mx-auto md:mx-0" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">Vice-President: Shreesh Poudel</h3>
+            <p class="text-gray-600 mb-4">CEO, MORU Wallet</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Shreesh Poudel is a seasoned executive with extensive experience
               in the fintech sector. He currently serves as the Chief Executive
               Officer at Moru Digital Wallet, where he leads strategic
@@ -346,24 +220,22 @@
               further evidenced by his role as Secretary of the Digital ACAN
               Committee.
             </p>
-            <a
-              href="https://www.linkedin.com/in/cashreesh/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/cashreesh/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/binay_regmi.png"
-              alt="Binay Regmi"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
+        </div>
+        <!-- Member 4 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+          <div class="flex-shrink-0">
+            <img src="./assets/img/binay_regmi.png" alt="Binay Regmi"
+              class="w-40 h-40 rounded-full object-cover mx-auto md:mx-0" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">
               Secretary: Binay Regmi
             </h3>
-            <p class="text-gray-600">CEO, CityPay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+            <p class="text-gray-600 mb-4">CEO, CityPay</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Binay Regmi is the Chief Executive Officer of CityPAY, a leading
               digital payment platform in Nepal, where he spearheads strategic
               initiatives to advance urban financial solutions through digital
@@ -377,23 +249,23 @@
               underscoring his commitment to enhancing financial inclusion and
               technological advancement in the region.
             </p>
-            <a
-              href="https://www.linkedin.com/in/binay-regmi-4572671a/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/binay-regmi-4572671a/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/manoj_mehta.png"
-              alt="Manoj Mehta"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
+        </div>
+
+        <!-- Member 5 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+          <div class="flex-shrink-0">
+            <img src="./assets/img/manoj_mehta.png" alt="Manoj Mehta"
+              class="w-40 h-40 rounded-full object-cover mx-auto md:mx-0" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">
               Treasurer: Manoj Mehta
             </h3>
-            <p class="text-gray-600">CEO, MyPay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+            <p class="text-gray-600 mb-4">CEO, MyPay</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Manoj Mehta is the Chief Executive Officer of MyPay and the
               Treasurer of the PSP Association Nepal, bringing extensive
               expertise in fintech, cross-border payments, and digital
@@ -408,24 +280,21 @@
               inclusion and sustainable digital growth, he continues to
               contribute meaningfully to Nepal’s evolving fintech landscape.
             </p>
-            <a
-              href="https://www.linkedin.com/in/camanojmehta/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/camanojmehta/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/niraj_shukla.png"
-              alt="Niraj Shukla"
-              class="w-34 h-36 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
+        </div>
+        <!-- Member 5 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+          <div class="flex-shrink-0">
+            <img src="./assets/img/niraj_shukla.png" alt="Niraj Shukla" class="w-34 h-36 rounded-full mb-4 mx-auto" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">
               Member: Niraj Shukla
             </h3>
-            <p class="text-gray-600">CEO, Cell Pay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+            <p class="text-gray-600 mb-4">CEO, Cell Pay</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Niraj Shukla is an experienced fintech and digital banking
               professional with over 12 years of expertise in software
               engineering and product innovation. He currently serves as the CEO
@@ -437,23 +306,22 @@
               is passionate about leveraging technology to transform financial
               services and deliver impactful digital innovation.
             </p>
-            <a
-              href="https://www.linkedin.com/in/nirajkshukla/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/nirajkshukla/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/hemant_tandon.png"
-              alt="Hemant Tandon Chhetri"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
+        </div>
+        <!-- Member 6 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+          <div class="flex-shrink-0">
+            <img src="./assets/img/hemant_tandon.png" alt="Hemant Tandon Chhetri"
+              class="w-40 h-40 rounded-full object-cover mx-auto md:mx-0" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">
               Member: Hemant Tandon Chhetri
             </h3>
-            <p class="text-gray-600">CEO, Hamro Pay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+            <p class="text-gray-600 mb-4">CEO, Hamro Pay</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Hemant Tandon Chhetri, the CEO of Hamro Pay, has a diverse
               professional background. He began as a professional graphic
               designer before transitioning to the banking sector, where he held
@@ -474,24 +342,23 @@
               Nepal," "National Profile of Nepal," "Municipality Profile of
               Nepal," and "National Policies of Nepal."
             </p>
-            <a
-              href="https://www.linkedin.com/in/hemant-tandon-chhetri-bbbb14151/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/hemant-tandon-chhetri-bbbb14151/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/pranaya_bhandari.png"
-              alt="Pranaya Rajbhandari"
-              class="w-32 h-35 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
+        </div>
+        <!-- Member 7 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+
+          <div class="flex-shrink-0">
+            <img src="./assets/img/pranaya_bhandari.png" alt="Pranaya Rajbhandari"
+              class="w-40 h-40 rounded-full object-cover mx-auto md:mx-0" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">
               Member: Pranaya Rajbhandari
             </h3>
-            <p class="text-gray-600">CEO, MOCO</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+            <p class="text-gray-600 mb-4">CEO, MOCO</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Pranaya Rajbhandari is the Chief Executive Officer and Co-Founder
               of FOCUSONE Payment Solutions, the company behind Nepal's
               innovative digital wallet platform, MOCO. Under his leadership,
@@ -506,24 +373,23 @@
               industry standards that support the growth of digital financial
               services in the country.
             </p>
-            <a
-              href="https://www.linkedin.com/in/pranaya-rajbhandari-79a2b211/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/pranaya-rajbhandari-79a2b211/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
+        </div>
 
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/bikki_shahi.png"
-              alt="Bikki Shahi"
-              class="w-35 h-32 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">
+        <!-- Member 8 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+
+          <div class="flex-shrink-0">
+            <img src="./assets/img/bikki_shahi.png" alt="Bikki Shahi" class="w-35 h-32 rounded-full mb-4 mx-auto" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">
               Member: Bikki Shahi
             </h3>
-            <p class="text-gray-600">CEO, Prabhu Pay</p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+            <p class="text-gray-600 mb-4">CEO, Prabhu Pay</p>
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Bikki Shahi is the Chief Executive Officer of Prabhu Pay, a
               leading digital wallet in Nepal. With a strong background in IT
               infrastructure and network administration, he focuses on
@@ -538,87 +404,104 @@
               industry peers and organizations to enhance IT capabilities
               through innovative and practical technology solutions.
             </p>
-            <a
-              href="https://www.linkedin.com/in/bikky-shahi-78b801240/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/bikky-shahi-78b801240/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
+        </div>
 
-          <div class="bg-white p-6 rounded-lg shadow">
-            <img
-              src="./assets/img/pratap_adhikari.png"
-              alt="Pratap Adhikari"
-              class="w-32 h-32 rounded-full mb-4 mx-auto"
-            />
-            <h3 class="text-lg font-semibold text-blue-900">Pratap Adhikari</h3>
-            <p class="text-gray-600">
+        <!-- Member 9 -->
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6">
+
+          <div class="flex-shrink-0">
+            <img src="./assets/img/pratap_adhikari.png" alt="Pratap Adhikari"
+              class="w-32 h-32 rounded-full mb-4 mx-auto" />
+          </div>
+          <div class="mt-6 md:mt-0 md:ml-8">
+            <h3 class="text-blue-900 font-medium">Pratap Adhikari</h3>
+            <p class="text-gray-600 mb-4">
               Legal and Policy Advisor, PSP Association
             </p>
-            <p class="text-sm text-gray-600" style="text-align: justify">
+            <p class="text-gray-700 text-justify text-sm leading-relaxed">
               Legal and Policy Advisor,
-Pratap Adhikari is a strategic legal and policy advisor specializing in payment systems, digital finance, and regulatory frameworks. At PSP Association, he leverages his expertise in financial regulations, blockchain technology, and compliance to advance the digital wallet industry's interests across APAC and global markets. With a Master of Laws (LLM) in International Business Law and extensive experience in corporate law and tech policy, Pratap navigates complex regulatory landscapes while advocating for innovation-friendly policies that balance security, consumer protection, and industry growth.
-His work encompasses shaping regulatory standards for digital payments and fintech, advising on cross-border compliance and risk mitigation, and driving policy initiatives to foster financial inclusion. Pratap is recognized for his thought leadership at the intersection of law, technology, and finance, actively collaborating with regulators, industry stakeholders, and policymakers to analyze emerging trends in blockchain and digital assets. Through his strategic guidance, he helps build resilient frameworks that support the future of digital transactions while ensuring sustainable industry development.
+              Pratap Adhikari is a strategic legal and policy advisor specializing in payment systems, digital finance,
+              and regulatory frameworks. At PSP Association, he leverages his expertise in financial regulations,
+              blockchain technology, and compliance to advance the digital wallet industry's interests across APAC and
+              global markets. With a Master of Laws (LLM) in International Business Law and extensive experience in
+              corporate law and tech policy, Pratap navigates complex regulatory landscapes while advocating for
+              innovation-friendly policies that balance security, consumer protection, and industry growth.
+              His work encompasses shaping regulatory standards for digital payments and fintech, advising on
+              cross-border
+              compliance and risk mitigation, and driving policy initiatives to foster financial inclusion. Pratap is
+              recognized for his thought leadership at the intersection of law, technology, and finance, actively
+              collaborating with regulators, industry stakeholders, and policymakers to analyze emerging trends in
+              blockchain and digital assets. Through his strategic guidance, he helps build resilient frameworks that
+              support the future of digital transactions while ensuring sustainable industry development.
             </p>
-            <a
-              href="https://www.linkedin.com/in/pratap-adhikari-0b360417b/"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/pratap-adhikari-0b360417b/"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block">LinkedIn Profile</a>
           </div>
-        </div>
-      </section>
 
-    </main>
-
-    <footer class="bg-blue-900 text-white py-8">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
-            <p class="text-gray-300">
-              Empowering professionals with resources, events, and community
-              support for PSP excellence.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href="about.html" class="text-gray-300 hover:text-white"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a href="events.html" class="text-gray-300 hover:text-white"
-                  >Events</a
-                >
-              </li>
-              <li>
-                <a href="resources.html" class="text-gray-300 hover:text-white"
-                  >Resources</a
-                >
-              </li>
-              <li>
-                <a href="advocacy.html" class="text-gray-300 hover:text-white"
-                  >Advocacy</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-            <p class="text-gray-300">Email: pspa.nepal@gmail.com</p>
-            <p class="text-gray-300">Phone: (+977) 9866008482</p>
-            <p class="text-gray-300">Address: Kathmandu, Nepal</p>
-          </div>
-        </div>
-        <div class="mt-8 text-center text-gray-300 text-xs">
-          © 2025 PSP Association. All rights reserved.
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="js/main.js"></script>
-  </body>
+  </main>
+
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
+          <p class="text-gray-300">
+            Empowering professionals with resources, events, and community
+            support for PSP excellence.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="about.html" class="text-gray-300 hover:text-white">About Us</a>
+            </li>
+            <li>
+              <a href="https://www.nrb.org.np/departments/psd/" class="text-gray-300 hover:text-white">NRB PSP
+                Department</a>
+            </li>
+
+            <li>
+              <a href="events.html" class="text-gray-300 hover:text-white">Events</a>
+            </li>
+
+            <li>
+              <a href="resources.html" class="text-gray-300 hover:text-white">Resources</a>
+            </li>
+
+
+            <li>
+              <a href="advocacy.html" class="text-gray-300 hover:text-white">Advocacy</a>
+            </li>
+            <li>
+              <a href="https://www.nta.gov.np/" class="text-gray-300 hover:text-white">NTA</a>
+            </li>
+            <li>
+              <a href="  https://mof.gov.np/" class="text-gray-300 hover:text-white">Ministry Of Finance</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-300">Email: pspa.nepal@gmail.com</p>
+          <p class="text-gray-300">Phone: (+977) 9866008482</p>
+          <p class="text-gray-300">Address: Kathmandu, Nepal</p>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-gray-300 text-xs">
+        © 2025 PSP Association. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
