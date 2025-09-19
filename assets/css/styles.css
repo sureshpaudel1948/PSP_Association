@@ -11,12 +11,9 @@ body {
       #7ec3ff 90%,
       #c3d6ff 60%,
       #ffffff 98%);
-  /* Light blue gradient */
   position: relative;
   min-height: 100vh;
-  /* Ensure body covers full viewport height */
   overflow-x: hidden;
-  /* Prevent horizontal scroll */
 }
 
 /* Subtle wave pattern using pseudo-element */
@@ -29,17 +26,12 @@ body::before {
   height: 100%;
   background: repeating-linear-gradient(105deg,
       rgba(255, 255, 255, 0.29),
-      /* Semi-transparent white for wave effect */
       rgba(255, 255, 255, 0.1) 10px,
       transparent 20px,
       transparent 110px);
-  /* Creates a subtle diagonal wave pattern */
   opacity: 0.3;
-  /* Low opacity for subtlety */
   z-index: -1;
-  /* Place behind content */
   pointer-events: none;
-  /* Prevent interaction with pseudo-element */
 }
 
 .py-4 {
@@ -54,12 +46,14 @@ nav ul li a {
 
 .form input:focus {
   border-color: #2563eb;
+  transition: all 0.3s ease;
 }
 
 /* Invalid input styling */
 input:invalid:focus {
   border-color: #ef4444;
   box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+  transition: all 0.3s ease;
 }
 
 /* Card hover effect */
@@ -84,22 +78,94 @@ input:invalid:focus {
     padding: 1rem;
   }
 
+  nav ul {
+    flex-direction: column;
+  }
+
+  #about-dropdown,
+  #media-dropdown,
   #resources-dropdown {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    display: none;
+  }
+
+  .group:hover #about-dropdown,
+  .group:hover #media-dropdown,
+  .group:hover #resources-dropdown {
+    display: block;
+  }
+
+  footer a,
+p {
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 0.8em;
+}
+
+.member .memb-logo {
+  width: 200px;
+  height: 170px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memb-logo .mem_logo {
+  max-width: 190px;
+  max-height: 150px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.memb-logo .mem_logo:hover {
+  transform: scale(1.05);
+}
+
+/* Dropdown menu styling */
+.group:hover #resources-dropdown,
+#resources-dropdown.show {
+  display: block;
+}
+
+#resources-dropdown {
+  display: none;
+}
+
+/* #resources-dropdown {
     width: 100%;
     left: 0;
-  }
+  } */
 
-  #pdf-modal .modal-content {
-    width: 100%;
-    max-height: 85vh;
-    margin: 10% auto;
-  }
-
-  #pdf-canvas {
-    max-width: 100%;
-    height: auto;
-  }
+/* PDF viewer modal styling (unchanged unless needed) */
+#pdf-modal {
+  transition: opacity 0.3s ease;
 }
+
+#pdf-modal .modal-content {
+  width: 100%;
+  max-height: 85vh;
+  margin: 10% auto;
+}
+
+#pdf-modal.show {
+  display: flex;
+}
+
+#pdf-canvas {
+  max-width: 100%;
+  border: 1px solid #e5e7eb;
+  height: auto;
+}
+
+}
+
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #pdf-modal .modal-content {
@@ -174,7 +240,8 @@ p {
 
 .modal-content .flex-1 {
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on mobile */
 }
 
 @keyframes fadeIn {
@@ -182,6 +249,7 @@ p {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -203,6 +271,21 @@ p {
   z-index: 1000;
 }
 
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.modal-content:hover {
+  transform: scale(1.02);
+}
+
 .close {
   position: absolute;
   top: 10px;
@@ -210,6 +293,7 @@ p {
   font-size: 24px;
   cursor: pointer;
   color: #666;
+  transition: color 0.3s ease;
 }
 
 .close:hover {
