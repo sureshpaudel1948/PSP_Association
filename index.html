@@ -10,6 +10,9 @@
     />
     <link rel="icon" href="assets/img/logo.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Chart.js for line graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
   </head>
   <body class="bg-gray-100 font-sans">
     <header class="bg-white shadow">
@@ -30,78 +33,80 @@
           <li>
             <a
               href="index.html"
-              class="text-blue-600 hover:text-blue-800"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
               aria-current="page"
               >Home</a
             >
           </li>
-         <li class="relative group">
-  <a
-    href="about.html"
-    class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-    aria-haspopup="true"
-    aria-expanded="false"
-    id="about-dropdown-toggle"
-  >
-    About
-    <svg
-      class="ml-1 w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M19 9l-7 7-7-7"
-      ></path>
-    </svg>
-  </a>
-  <ul
-    class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
-    id="about-dropdown"
-    role="menu"
-  >
-    <li>
-      <a
-        href="about.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >About Us</a>
-    </li>
-    <li>
-      <a
-        href="executive.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >Executive Committee</a>
-    </li>
-    <li>
-      <a
-        href="member.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >Member Wallets</a>
-    </li>
-  </ul>
-</li>
-
+          <li class="relative group">
+            <a
+              href="about.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-transform"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="about-dropdown-toggle"
+            >
+              About
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              id="about-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="about.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                >About Us</a>
+              </li>
+              <li>
+                <a
+                  href="executive.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                >Executive Committee</a>
+              </li>
+              <li>
+                <a
+                  href="member.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                >Member Wallets</a>
+              </li>
+            </ul>
+          </li>
           <li>
-            <a href="events.html" class="text-blue-600 hover:text-blue-800"
+            <a
+              href="events.html"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
               >Events</a
             >
           </li>
           <li class="relative">
             <a
               href="media.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-transform"
               aria-current="page"
               aria-haspopup="true"
               aria-expanded="false"
               id="media-dropdown-toggle"
-              >Media
+            >
+              Media
               <svg
                 class="ml-1 w-4 h-4"
                 fill="none"
@@ -125,9 +130,9 @@
               <li>
                 <a
                   href="media.html#notice"
-                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Notice</a
+                >Notice</a
                 >
               </li>
               <li>
@@ -135,7 +140,7 @@
                   href="media.html#newsletter"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Newsletter</a
+                >Newsletter</a
                 >
               </li>
               <li>
@@ -143,7 +148,7 @@
                   href="media.html#blogs"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Blogs</a
+                >Blogs</a
                 >
               </li>
               <li>
@@ -151,7 +156,7 @@
                   href="media.html#publications"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Publications</a
+                >Publications</a
                 >
               </li>
               <li>
@@ -159,7 +164,7 @@
                   href="media.html#gallery"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Gallery</a
+                >Gallery</a
                 >
               </li>
             </ul>
@@ -167,12 +172,13 @@
           <li class="relative group">
             <a
               href="resources.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-transform"
               aria-current="page"
               aria-haspopup="true"
               aria-expanded="false"
               id="resources-dropdown-toggle"
-              >Resources
+            >
+              Resources
               <svg
                 class="ml-1 w-4 h-4"
                 fill="none"
@@ -198,7 +204,7 @@
                   href="resources.html#legislation"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Legislation</a
+                >Legislation</a
                 >
               </li>
               <li>
@@ -206,7 +212,7 @@
                   href="resources.html#directives"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Directives and Guidelines</a
+                >Directives and Guidelines</a
                 >
               </li>
               <li>
@@ -214,7 +220,7 @@
                   href="resources.html#bylaws"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Bylaws</a
+                >Bylaws</a
                 >
               </li>
               <li>
@@ -222,27 +228,32 @@
                   href="resources.html#policies"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
-                  >Policies and Strategies</a
+                >Policies and Strategies</a
                 >
               </li>
             </ul>
           </li>
           <li>
-            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
+            <a
+              href="advocacy.html"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
               >Advocacy</a
             >
           </li>
           <li>
-            <a href="#contact" class="text-blue-600 hover:text-blue-800"
+            <a
+              href="#contact"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
               >Contact</a
             >
           </li>
           <li class="ml-10">
             <a
               href="membership.html"
-              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-              >Collaborate With Us</a
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 hover:scale-105 transition-transform"
             >
+              Collaborate With Us
+            </a>
           </li>
         </ul>
       </nav>
@@ -273,8 +284,8 @@
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Member Digital Wallets -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            aria-label="9 Member Digital Wallets"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            aria-label="10 Member Digital Wallets"
           >
             <div class="flex items-center justify-center mb-4">
               <svg
@@ -299,8 +310,8 @@
           </div>
           <!-- Total Users -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            aria-label="93.99 Lakh Total Users"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            aria-label="2.676 Crores Total Users"
             style="animation-delay: 0.1s"
           >
             <div class="flex items-center justify-center mb-4">
@@ -318,14 +329,14 @@
                   d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 005.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 ></path>
               </svg>
-              <span class="text-4xl font-bold text-blue-900">1.80 Crores</span>
+              <span class="text-4xl font-bold text-blue-900">2.676 Crores</span>
             </div>
             <p class="text-lg font-semibold text-gray-700">Total Users</p>
           </div>
           <!-- Number of Payments Processed -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            aria-label="1.5 Crore Payments Processed"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            aria-label="400,929,083 Payments Processed"
             style="animation-delay: 0.2s"
           >
             <div class="flex items-center justify-center mb-4">
@@ -343,17 +354,16 @@
                   d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 ></path>
               </svg>
-              <span class="text-4xl font-bold text-blue-900">433,503,487</span>
+              <span class="text-4xl font-bold text-blue-900">400,929,083</span>
             </div>
             <p class="text-lg font-semibold text-gray-700">
               Number Of Transactions Processed
             </p>
-
           </div>
           <!-- Transaction Volumes -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            aria-label="50 Billion NPR Transaction Volume"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            aria-label="506.314 Billion NPR Transaction Volume"
             style="animation-delay: 0.3s"
           >
             <div class="flex items-center justify-center mb-4">
@@ -371,17 +381,16 @@
                   d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
                 ></path>
               </svg>
-              <span class="text-4xl font-bold text-blue-900">50B NPR</span>
+              <span class="text-4xl font-bold text-blue-900">506.314B NPR</span>
             </div>
             <p class="text-lg font-semibold text-gray-700">
               Transaction Volume (In Billion)
             </p>
-            <!-- Replace '50B NPR' with actual data -->
           </div>
           <!-- Average Number of Services Offered -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            aria-label="12 Services Offered on Average"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            aria-label="1K+ Services Offered on Average"
             style="animation-delay: 0.4s"
           >
             <div class="flex items-center justify-center mb-4">
@@ -404,12 +413,11 @@
             <p class="text-lg font-semibold text-gray-700">
               Number of Unique Services Offered
             </p>
-            <!-- Replace '12' with actual data -->
           </div>
           <!-- Average Year of Operation -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            aria-label="5 Years Average Operation"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            aria-label="7.29 Years Average Operation"
             style="animation-delay: 0.5s"
           >
             <div class="flex items-center justify-center mb-4">
@@ -433,9 +441,9 @@
               Average Years of Operation
             </p>
           </div>
-<!-- Employment -->
+          <!-- Employment -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
             aria-label="Employment"
             style="animation-delay: 0.5s"
           >
@@ -460,11 +468,10 @@
               Employment (Direct & Indirect)
             </p>
           </div>
-          
           <!-- Associated Government Offices -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            aria-label="5 Years Average Operation"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            aria-label="500K+ SMEs Enabled"
             style="animation-delay: 0.5s"
           >
             <div class="flex items-center justify-center mb-4">
@@ -488,11 +495,9 @@
               SMEs Enabled
             </p>
           </div>
-          
-
-          <!-- Gender Ratio-->
+          <!-- Gender Ratio -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
             aria-label="60:40 Male to Female Employment Ratio"
             style="animation-delay: 0.6s"
           >
@@ -516,16 +521,26 @@
             <p class="text-lg font-semibold text-gray-700">
               Gender Ratio (Male:Female)
             </p>
-            <!-- Replace '60:40' with actual data -->
           </div>
-         
+        </div>
+      </section>
+
+      <!-- Milestone Journey Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6 text-center">
+          Milestone Journey of PSP from 2015 till now
+        </h2>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <canvas id="milestoneChart" class="w-full h-64"></canvas>
         </div>
       </section>
 
       <section class="mb-12">
         <h2 class="text-2xl font-semibold text-blue-900 mb-6">Latest News</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <article class="bg-white p-6 rounded-lg shadow">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
             <h3 class="text-xl font-semibold text-blue-900 mb-2">
               New PSP Features Released
             </h3>
@@ -533,13 +548,16 @@
               Explore the latest updates to our PSP platform, designed to
               enhance your productivity and collaboration.
             </p>
-            <a
-              href="resources.html"
+            <button
               class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >Learn More</a
+              onclick="openModal('modal1')"
             >
+              Learn More
+            </button>
           </article>
-          <article class="bg-white p-6 rounded-lg shadow">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
             <h3 class="text-xl font-semibold text-blue-900 mb-2">
               Upcoming Events
             </h3>
@@ -547,11 +565,12 @@
               Join our next webinar on PSP best practices and network with
               industry leaders.
             </p>
-            <a
-              href="events.html"
+            <button
               class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >View Events</a
+              onclick="openModal('modal2')"
             >
+              View Events
+            </button>
           </article>
         </div>
       </section>
@@ -591,17 +610,17 @@
               <label for="message" class="block text-gray-700 font-medium mb-2"
                 >Your Message:</label
               >
-              <input
-                type="text"
+              <textarea
                 id="message"
                 name="message"
                 class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
                 required
-              />
+              ></textarea>
             </div>
             <button
               type="submit"
               class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+              onclick="openModal('modal3', event)"
             >
               Contact
             </button>
@@ -623,42 +642,57 @@
           <div>
             <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
             <ul class="space-y-2">
-            <li>
-                <a href="about.html" class="text-gray-300 hover:text-white"
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
                   >About Us</a
                 >
               </li>
-               <li>
-                <a href="https://www.nrb.org.np/departments/psd/" class="text-gray-300 hover:text-white"
-                  >NRB PSP Department</a
-                >
-              </li>
-        
               <li>
-                <a href="events.html" class="text-gray-300 hover:text-white"
+                <a
+                  href="events.html"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
                   >Events</a
                 >
               </li>
-             
               <li>
-                <a href="resources.html" class="text-gray-300 hover:text-white"
+                <a
+                  href="resources.html"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
                   >Resources</a
                 >
-              </li> 
-        
-            
+              </li>
               <li>
-                <a href="advocacy.html" class="text-gray-300 hover:text-white"
+                <a
+                  href="advocacy.html"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
                   >Advocacy</a
                 >
               </li>
-                <li>
-                <a href="https://www.nta.gov.np/" class="text-gray-300 hover:text-white"
-                  >NTA</a
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Reference Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://www.nrb.org.np/departments/psd/"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  >NRB PSP Department</a
                 >
               </li>
-                <li>
-                <a href="  https://mof.gov.np/" class="text-gray-300 hover:text-white"
+              <li>
+                <a
+                  href="https://www.nta.gov.np/"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  >Nepal Telecommunications Authority</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://mof.gov.np/"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
                   >Ministry Of Finance</a
                 >
               </li>
@@ -672,11 +706,140 @@
           </div>
         </div>
         <div class="mt-8 text-center text-gray-300 text-xs">
-          &copy; 2025 PSP Association. All rights reserved.
+          © 2025 PSP Association. All rights reserved.
         </div>
       </div>
     </footer>
 
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">
+          New PSP Features Released
+        </h3>
+        <p class="text-gray-600">
+          Explore the latest updates to our PSP platform, designed to enhance
+          your productivity and collaboration. Stay tuned for more details!
+        </p>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">Upcoming Events</h3>
+        <p class="text-gray-600">
+          Join our next webinar on PSP best practices and network with industry
+          leaders. Check <a href="events.html" class="text-blue-600">Events</a>
+          for dates and registration.
+        </p>
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">Contact Submitted</h3>
+        <p class="text-gray-600">
+          Thank you for your message! We will get back to you soon at the
+          provided email.
+        </p>
+      </div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script>
+      // Modal Functions
+      function openModal(modalId, event) {
+        if (event) event.preventDefault();
+        document.getElementById(modalId).style.display = 'block';
+      }
+      function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+      }
+
+      // Line Graph with Chart.js
+      document.addEventListener('DOMContentLoaded', () => {
+        const ctx = document.getElementById('milestoneChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['FY 77/78', 'FY 78/79', 'FY 79/80', 'FY 80/81', 'FY 81/82'],
+            datasets: [
+              {
+                label: 'Wallet Users (Million)',
+                data: [8.886, 13.676, 18.94, 23.46, 26.766],
+                borderColor: '#2563eb',
+                backgroundColor: 'rgba(37, 99, 235, 0.2)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4
+              },
+              {
+                label: 'Number of Transactions (Million)',
+                data: [124.95, 167.5, 213.37, 294.54, 400.9],
+                borderColor: '#10b981',
+                backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4
+              },
+              {
+                label: 'Transaction Volume (Billion NPR)',
+                data: [114.432, 184.293, 219.807, 302.694, 506.314],
+                borderColor: '#ef4444',
+                backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Values (Million/Billion)'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'Financial Year'
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                position: 'top'
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    let label = context.dataset.label || '';
+                    if (label.includes('Million')) {
+                      return `${label}: ${context.parsed.y}M`;
+                    } else if (label.includes('Billion')) {
+                      return `${label}: ${context.parsed.y}B NPR`;
+                    }
+                    return `${label}: ${context.parsed.y}`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      });
+
+      // Contact Form Submission (Placeholder until backend)
+      document.getElementById('join-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        openModal('modal3');
+        document.getElementById('join-form').reset();
+      });
+    </script>
   </body>
 </html>
