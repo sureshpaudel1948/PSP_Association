@@ -68,6 +68,13 @@ input:invalid:focus {
   transition: box-shadow 0.3s ease;
 }
 
+@media (max-width: 2560px) { 
+  .w-full{
+    height: 580px !important;
+    width: 540px !important;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .form {
