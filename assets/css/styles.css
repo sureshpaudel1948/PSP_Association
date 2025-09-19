@@ -68,11 +68,10 @@ input:invalid:focus {
   transition: box-shadow 0.3s ease;
 }
 
-@media (max-width: 2560px) { 
-  .w-full{
-    height: 580px !important;
-    width: 540px !important;
-  }
+/* Remove fixed width and height for w-full */
+.w-full {
+  width: 100%;
+  height: auto;
 }
 
 /* Responsive adjustments */
@@ -83,6 +82,36 @@ input:invalid:focus {
 
   .bg-blue-50 {
     padding: 1rem;
+  }
+
+  #resources-dropdown {
+    width: 100%;
+    left: 0;
+  }
+
+  #pdf-modal .modal-content {
+    width: 100%;
+    max-height: 85vh;
+    margin: 10% auto;
+  }
+
+  #pdf-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #pdf-modal .modal-content {
+    max-height: 95vh;
+    width: 40%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 2560px) {
+  #pdf-modal .modal-content {
+    max-height: 95vh;
+    width: 40%;
   }
 }
 
@@ -133,75 +162,56 @@ p {
 #pdf-canvas {
   border: 1px solid #e5e7eb;
   max-width: 100%;
+  height: auto;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .form {
-    max-width: 100%;
-  }
+/* Ensure modal content does not overflow */
+.modal-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-  .bg-blue-50 {
-    padding: 1rem;
-  }
+.modal-content .flex-1 {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
 
-  #resources-dropdown {
-    width: 100%;
-    left: 0;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  #pdf-modal .max-w-3xl {
-    width: 95%;
-    max-height: 80vh;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-#media-dropdown.show,
-#resources-dropdown.show {
-  display: block;
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .animate-fade-in {
-        animation: fadeIn 0.5s ease-out forwards;
-      }
-      .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-      }
-      .modal-content {
-        background-color: white;
-        margin: 15% auto;
-        padding: 20px;
-        border-radius: 8px;
-        width: 90%;
-        max-width: 500px;
-        position: relative;
-      }
-      .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        cursor: pointer;
-        color: #666;
-      }
-      .close:hover {
-        color: #000;
-      }
-  
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close:hover {
+  color: #000;
+}
