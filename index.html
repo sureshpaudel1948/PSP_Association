@@ -12,19 +12,18 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <!-- Chart.js for line graph -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-
   </head>
-  <body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow">
+  <body class="bg-gray-100 font-sans overflow-x-hidden">
+    <header class="bg-white shadow-md">
       <nav
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
+        class="container mx-auto px-4 py-6 flex justify-between items-center transition-all duration-300"
       >
         <div class="text-2xl font-bold text-blue-900">
           <a href="index.html">
             <img
               src="assets/img/logo.png"
               alt="PSP Association Logo"
-              class="h-20 w-auto"
+              class="h-20 w-auto hover:scale-105 transition-transform duration-300"
               style="margin: 0; padding: 0"
             />
           </a>
@@ -33,7 +32,7 @@
           <li>
             <a
               href="index.html"
-              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-all duration-300"
               aria-current="page"
               >Home</a
             >
@@ -41,14 +40,14 @@
           <li class="relative group">
             <a
               href="about.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-transform"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-all duration-300"
               aria-haspopup="true"
               aria-expanded="false"
               id="about-dropdown-toggle"
             >
               About
               <svg
-                class="ml-1 w-4 h-4"
+                class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -63,28 +62,28 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               id="about-dropdown"
               role="menu"
             >
               <li>
                 <a
                   href="about.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >About Us</a>
               </li>
               <li>
                 <a
                   href="executive.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Executive Committee</a>
               </li>
               <li>
                 <a
                   href="member.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Member Wallets</a>
               </li>
@@ -93,14 +92,14 @@
           <li>
             <a
               href="events.html"
-              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-all duration-300"
               >Events</a
             >
           </li>
-          <li class="relative">
+          <li class="relative group">
             <a
               href="media.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-transform"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-all duration-300"
               aria-current="page"
               aria-haspopup="true"
               aria-expanded="false"
@@ -108,7 +107,7 @@
             >
               Media
               <svg
-                class="ml-1 w-4 h-4"
+                class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -123,14 +122,14 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               id="media-dropdown"
               role="menu"
             >
               <li>
                 <a
                   href="media.html#notice"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Notice</a
                 >
@@ -138,7 +137,7 @@
               <li>
                 <a
                   href="media.html#newsletter"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Newsletter</a
                 >
@@ -146,7 +145,7 @@
               <li>
                 <a
                   href="media.html#blogs"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Blogs</a
                 >
@@ -154,7 +153,7 @@
               <li>
                 <a
                   href="media.html#publications"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Publications</a
                 >
@@ -162,7 +161,7 @@
               <li>
                 <a
                   href="media.html#gallery"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Gallery</a
                 >
@@ -172,7 +171,7 @@
           <li class="relative group">
             <a
               href="resources.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-transform"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center hover:scale-105 transition-all duration-300"
               aria-current="page"
               aria-haspopup="true"
               aria-expanded="false"
@@ -180,7 +179,7 @@
             >
               Resources
               <svg
-                class="ml-1 w-4 h-4"
+                class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -195,14 +194,14 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               id="resources-dropdown"
               role="menu"
             >
               <li>
                 <a
                   href="resources.html#legislation"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Legislation</a
                 >
@@ -210,7 +209,7 @@
               <li>
                 <a
                   href="resources.html#directives"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Directives and Guidelines</a
                 >
@@ -218,7 +217,7 @@
               <li>
                 <a
                   href="resources.html#bylaws"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Bylaws</a
                 >
@@ -226,7 +225,7 @@
               <li>
                 <a
                   href="resources.html#policies"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-300"
                   role="menuitem"
                 >Policies and Strategies</a
                 >
@@ -236,21 +235,21 @@
           <li>
             <a
               href="advocacy.html"
-              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-all duration-300"
               >Advocacy</a
             >
           </li>
           <li>
             <a
               href="#contact"
-              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-transform"
+              class="text-blue-600 hover:text-blue-800 hover:scale-105 transition-all duration-300"
               >Contact</a
             >
           </li>
           <li class="ml-10">
             <a
               href="membership.html"
-              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 hover:scale-105 transition-transform"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 hover:scale-105 transition-all duration-300"
             >
               Collaborate With Us
             </a>
@@ -261,14 +260,14 @@
 
     <main class="container mx-auto px-4 py-12">
       <section class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-blue-900 mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4 transform transition-all duration-300 hover:scale-105">
           Welcome to the Home of Digital Wallets of Nepal
         </h1>
-        <h4 class="text-xl text-gray-700 mb-6">
+        <h4 class="text-xl md:text-2xl text-gray-700 mb-6">
           Payment Service Provider Association
         </h4>
         <p
-          class="text-sm text-gray-700 max-w-2xl mx-auto"
+          class="text-sm md:text-base text-gray-700 max-w-3xl mx-auto"
           style="text-align: justify"
         >
           We are an umbrella organisation of Payment Service Providers, also
@@ -281,10 +280,10 @@
           financial future.
         </p>
         <!-- Data Showcase Section -->
-        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Member Digital Wallets -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="10 Member Digital Wallets"
           >
             <div class="flex items-center justify-center mb-4">
@@ -310,7 +309,7 @@
           </div>
           <!-- Total Users -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="2.676 Crores Total Users"
             style="animation-delay: 0.1s"
           >
@@ -335,7 +334,7 @@
           </div>
           <!-- Number of Payments Processed -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="400,929,083 Payments Processed"
             style="animation-delay: 0.2s"
           >
@@ -362,7 +361,7 @@
           </div>
           <!-- Transaction Volumes -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="506.314 Billion NPR Transaction Volume"
             style="animation-delay: 0.3s"
           >
@@ -389,7 +388,7 @@
           </div>
           <!-- Average Number of Services Offered -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="1K+ Services Offered on Average"
             style="animation-delay: 0.4s"
           >
@@ -416,7 +415,7 @@
           </div>
           <!-- Average Year of Operation -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="7.29 Years Average Operation"
             style="animation-delay: 0.5s"
           >
@@ -443,9 +442,9 @@
           </div>
           <!-- Employment -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="Employment"
-            style="animation-delay: 0.5s"
+            style="animation-delay: 0.6s"
           >
             <div class="flex items-center justify-center mb-4">
               <svg
@@ -470,9 +469,9 @@
           </div>
           <!-- Associated Government Offices -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="500K+ SMEs Enabled"
-            style="animation-delay: 0.5s"
+            style="animation-delay: 0.7s"
           >
             <div class="flex items-center justify-center mb-4">
               <svg
@@ -497,9 +496,9 @@
           </div>
           <!-- Gender Ratio -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             aria-label="60:40 Male to Female Employment Ratio"
-            style="animation-delay: 0.6s"
+            style="animation-delay: 0.8s"
           >
             <div class="flex items-center justify-center mb-4">
               <svg
@@ -527,21 +526,23 @@
 
       <!-- Milestone Journey Section -->
       <section class="mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-6 text-center">
+        <h2 class="text-2xl md:text-3xl font-semibold text-blue-900 mb-6 text-center transform transition-all duration-300 hover:scale-105">
           Milestone Journey of PSP from 2015 till now
         </h2>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <canvas id="milestoneChart" class="w-full h-64"></canvas>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+          <canvas id="milestoneChart" class="w-full h-64 md:h-80"></canvas>
         </div>
       </section>
 
       <section class="mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-6">Latest News</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold text-blue-900 mb-6 transform transition-all duration-300 hover:scale-105">
+          Latest News
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-xl hover:scale-105 transition-all duration-300"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
           >
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+            <h3 class="text-xl md:text-2xl font-semibold text-blue-900 mb-2">
               New PSP Features Released
             </h3>
             <p class="text-gray-600">
@@ -549,16 +550,16 @@
               enhance your productivity and collaboration.
             </p>
             <button
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block hover:scale-105 transition-all duration-300"
               onclick="openModal('modal1')"
             >
               Learn More
             </button>
           </article>
           <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-xl hover:scale-105 transition-all duration-300"
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
           >
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+            <h3 class="text-xl md:text-2xl font-semibold text-blue-900 mb-2">
               Upcoming Events
             </h3>
             <p class="text-gray-600">
@@ -566,7 +567,7 @@
               industry leaders.
             </p>
             <button
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block hover:scale-105 transition-all duration-300"
               onclick="openModal('modal2')"
             >
               View Events
@@ -576,7 +577,9 @@
       </section>
 
       <section class="bg-blue-50 p-8 rounded-lg" id="contact">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-4">Contact Us</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold text-blue-900 mb-4 transform transition-all duration-300 hover:scale-105">
+          Contact Us
+        </h2>
         <p class="text-gray-700 mb-6 max-w-2xl">
           Contact us if you have any queries regarding our organization.
         </p>
@@ -590,7 +593,7 @@
                 type="text"
                 id="name"
                 name="name"
-                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all duration-300"
                 required
               />
             </div>
@@ -602,7 +605,7 @@
                 type="email"
                 id="email"
                 name="email"
-                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all duration-300"
                 required
               />
             </div>
@@ -613,13 +616,13 @@
               <textarea
                 id="message"
                 name="message"
-                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all duration-300"
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+              class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 hover:scale-105 transition-all duration-300"
               onclick="openModal('modal3', event)"
             >
               Contact
@@ -645,28 +648,28 @@
               <li>
                 <a
                   href="about.html"
-                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
                   href="events.html"
-                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300"
                   >Events</a
                 >
               </li>
               <li>
                 <a
                   href="resources.html"
-                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300"
                   >Resources</a
                 >
               </li>
               <li>
                 <a
                   href="advocacy.html"
-                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300"
                   >Advocacy</a
                 >
               </li>
@@ -678,21 +681,21 @@
               <li>
                 <a
                   href="https://www.nrb.org.np/departments/psd/"
-                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300"
                   >NRB PSP Department</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.nta.gov.np/"
-                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300"
                   >Nepal Telecommunications Authority</a
                 >
               </li>
               <li>
                 <a
                   href="https://mof.gov.np/"
-                  class="text-gray-300 hover:text-white hover:scale-105 transition-transform"
+                  class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300"
                   >Ministry Of Finance</a
                 >
               </li>
