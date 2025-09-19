@@ -10,6 +10,10 @@
     />
     <link rel="icon" href="assets/img/logo.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+</script>
   </head>
   <body class="bg-gray-100 font-sans">
     <header class="bg-white shadow">
@@ -249,234 +253,332 @@
     </header>
 
     <main class="container mx-auto px-4 py-12">
-      <!-- Advocacy Overview Section -->
-      <section class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-blue-900 mb-4">Advocacy</h1>
-        <p class="text-gray-700 max-w-2xl mx-auto" style="text-align: justify">
-          The PSP Association is committed to advocating for policies and
-          regulations that foster innovation, inclusion, and security in Nepal’s
-          digital payment ecosystem. Through policy briefs and regulatory
-          updates, we engage with stakeholders to shape a supportive environment
-          for Payment Service Providers.
+  <!-- Advocacy Overview Section -->
+  <section class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-blue-900 mb-4">Advocacy</h1>
+    <p class="text-gray-700 max-w-2xl mx-auto" style="text-align: justify">
+      The PSP Association is committed to advocating for policies and
+      regulations that foster innovation, inclusion, and security in Nepal’s
+      digital payment ecosystem. Through policy briefs and regulatory
+      updates, we engage with stakeholders to shape a supportive environment
+      for Payment Service Providers.
+    </p>
+  </section>
+
+  <!-- Policy Advocacy Briefs Section -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+      Policy Advocacy Briefs
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+      >
+        <img
+          src="assets/img/pdf_icon.png"
+          alt="PDF Icon"
+          class="w-16 h-16 mx-auto mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">
+          Promoting Financial Inclusion, 2025
+        </h3>
+        <p class="text-gray-600">
+          A brief advocating for policies to expand access to digital
+          financial services in rural Nepal.
         </p>
-      </section>
-
-      <!-- Policy Advocacy Briefs Section -->
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
-          Policy Advocacy Briefs
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+        <div class="mt-4">
+          <object
+            data="resources/pdfs/financial_inclusion_brief_2025.pdf"
+            type="application/pdf"
+            class="w-full h-64 border rounded-lg"
+            aria-label="Promoting Financial Inclusion 2025 PDF"
           >
-            <img
-              src="assets/img/pdf_icon.png"
-              alt="PDF Icon"
-              class="w-16 h-16 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              Promoting Financial Inclusion, 2025
-            </h3>
-            <p class="text-gray-600">
-              A brief advocating for policies to expand access to digital
-              financial services in rural Nepal.
+            <p>
+              Your browser does not support PDFs. <a
+                href="resources/pdfs/financial_inclusion_brief_2025.pdf"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+                >Download the PDF</a
+              >.
             </p>
-            <a
-              href="resources/pdfs/financial_inclusion_brief_2025.pdf"
-              target="_blank"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >View PDF</a
-            >
-          </article>
-          <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          </object>
+          <a
+            href="resources/pdfs/financial_inclusion_brief_2025.pdf"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
+            >Download PDF</a
           >
-            <img
-              src="assets/img/pdf_icon.png"
-              alt="PDF Icon"
-              class="w-16 h-16 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              Enhancing Cybersecurity in PSPs, 2025
-            </h3>
-            <p class="text-gray-600">
-              Recommendations for strengthening cybersecurity measures for
-              Payment Service Providers.
-            </p>
-            <a
-              href="resources/pdfs/cybersecurity_brief_2025.pdf"
-              target="_blank"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >View PDF</a
-            >
-          </article>
-          <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-          >
-            <img
-              src="assets/img/pdf_icon.png"
-              alt="PDF Icon"
-              class="w-16 h-16 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              Streamlining Licensing for PSPs, 2024
-            </h3>
-            <p class="text-gray-600">
-              Policy brief on simplifying licensing processes for new PSPs in
-              Nepal.
-            </p>
-            <a
-              href="resources/pdfs/licensing_brief_2024.pdf"
-              target="_blank"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >View PDF</a
-            >
-          </article>
         </div>
-      </section>
-
-      <!-- Regulatory Updates Section -->
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
-          Regulatory Updates
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+      </article>
+      <article
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+      >
+        <img
+          src="assets/img/pdf_icon.png"
+          alt="PDF Icon"
+          class="w-16 h-16 mx-auto mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">
+          Enhancing Cybersecurity in PSPs, 2025
+        </h3>
+        <p class="text-gray-600">
+          Recommendations for strengthening cybersecurity measures for
+          Payment Service Providers.
+        </p>
+        <div class="mt-4">
+          <object
+            data="resources/pdfs/cybersecurity_brief_2025.pdf"
+            type="application/pdf"
+            class="w-full h-64 border rounded-lg"
+            aria-label="Enhancing Cybersecurity in PSPs 2025 PDF"
           >
-            <img
-              src="assets/img/pdf_icon.png"
-              alt="PDF Icon"
-              class="w-16 h-16 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              NRB Payment System Directives Update, June 2025
-            </h3>
-            <p class="text-gray-600">
-              Latest updates to Nepal Rastra Bank’s directives for payment
-              systems.
+            <p>
+              Your browser does not support PDFs. <a
+                href="resources/pdfs/cybersecurity_brief_2025.pdf"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+                >Download the PDF</a
+              >.
             </p>
-            <a
-              href="resources/pdfs/nrb_directives_update_2025.pdf"
-              target="_blank"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >View PDF</a
-            >
-          </article>
-          <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          </object>
+          <a
+            href="resources/pdfs/cybersecurity_brief_2025.pdf"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
+            >Download PDF</a
           >
-            <img
-              src="assets/img/pdf_icon.png"
-              alt="PDF Icon"
-              class="w-16 h-16 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              AML/CFT Compliance Guidelines, April 2025
-            </h3>
-            <p class="text-gray-600">
-              Revised guidelines for anti-money laundering and counter-terrorism
-              financing compliance.
-            </p>
-            <a
-              href="resources/pdfs/aml_cft_guidelines_2025.pdf"
-              target="_blank"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >View PDF</a
-            >
-          </article>
-          <article
-            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-          >
-            <img
-              src="assets/img/pdf_icon.png"
-              alt="PDF Icon"
-              class="w-16 h-16 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              E-commerce Regulation Changes, January 2025
-            </h3>
-            <p class="text-gray-600">
-              Updates to regulations governing e-commerce transactions in Nepal.
-            </p>
-            <a
-              href="resources/pdfs/ecommerce_regulation_2025.pdf"
-              target="_blank"
-              class="text-blue-600 hover:text-blue-800 mt-4 inline-block"
-              >View PDF</a
-            >
-          </article>
         </div>
-      </section>
-    </main>
+      </article>
+      <article
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+      >
+        <img
+          src="assets/img/pdf_icon.png"
+          alt="PDF Icon"
+          class="w-16 h-16 mx-auto mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">
+          Streamlining Licensing for PSPs, 2024
+        </h3>
+        <p class="text-gray-600">
+          Policy brief on simplifying licensing processes for new PSPs in
+          Nepal.
+        </p>
+        <div class="mt-4">
+          <object
+            data="resources/pdfs/licensing_brief_2024.pdf"
+            type="application/pdf"
+            class="w-full h-64 border rounded-lg"
+            aria-label="Streamlining Licensing for PSPs 2024 PDF"
+          >
+            <p>
+              Your browser does not support PDFs. <a
+                href="resources/pdfs/licensing_brief_2024.pdf"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+                >Download the PDF</a
+              >.
+            </p>
+          </object>
+          <a
+            href="resources/pdfs/licensing_brief_2024.pdf"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
+            >Download PDF</a
+          >
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Regulatory Updates Section -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+      Regulatory Updates
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+      >
+        <img
+          src="assets/img/pdf_icon.png"
+          alt="PDF Icon"
+          class="w-16 h-16 mx-auto mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">
+          NRB Payment System Directives Update, June 2025
+        </h3>
+        <p class="text-gray-600">
+          Latest updates to Nepal Rastra Bank’s directives for payment
+          systems.
+        </p>
+        <div class="mt-4">
+          <object
+            data="resources/pdfs/nrb_directives_update_2025.pdf"
+            type="application/pdf"
+            class="w-full h-64 border rounded-lg"
+            aria-label="NRB Payment System Directives Update 2025 PDF"
+          >
+            <p>
+              Your browser does not support PDFs. <a
+                href="resources/pdfs/nrb_directives_update_2025.pdf"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+                >Download the PDF</a
+              >.
+            </p>
+          </object>
+          <a
+            href="resources/pdfs/nrb_directives_update_2025.pdf"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
+            >Download PDF</a
+          >
+        </div>
+      </article>
+      <article
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+      >
+        <img
+          src="assets/img/pdf_icon.png"
+          alt="PDF Icon"
+          class="w-16 h-16 mx-auto mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">
+          AML/CFT Compliance Guidelines, April 2025
+        </h3>
+        <p class="text-gray-600">
+          Revised guidelines for anti-money laundering and counter-terrorism
+          financing compliance.
+        </p>
+        <div class="mt-4">
+          <object
+            data="resources/pdfs/aml_cft_guidelines_2025.pdf"
+            type="application/pdf"
+            class="w-full h-64 border rounded-lg"
+            aria-label="AML/CFT Compliance Guidelines 2025 PDF"
+          >
+            <p>
+              Your browser does not support PDFs. <a
+                href="resources/pdfs/aml_cft_guidelines_2025.pdf"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+                >Download the PDF</a
+              >.
+            </p>
+          </object>
+          <a
+            href="resources/pdfs/aml_cft_guidelines_2025.pdf"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
+            >Download PDF</a
+          >
+        </div>
+      </article>
+      <article
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+      >
+        <img
+          src="assets/img/pdf_icon.png"
+          alt="PDF Icon"
+          class="w-16 h-16 mx-auto mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">
+          E-commerce Regulation Changes, January 2025
+        </h3>
+        <p class="text-gray-600">
+          Updates to regulations governing e-commerce transactions in Nepal.
+        </p>
+        <div class="mt-4">
+          <object
+            data="resources/pdfs/ecommerce_regulation_2025.pdf"
+            type="application/pdf"
+            class="w-full h-64 border rounded-lg"
+            aria-label="E-commerce Regulation Changes 2025 PDF"
+          >
+            <p>
+              Your browser does not support PDFs. <a
+                href="resources/pdfs/ecommerce_regulation_2025.pdf"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+                >Download the PDF</a
+              >.
+            </p>
+          </object>
+          <a
+            href="resources/pdfs/ecommerce_regulation_2025.pdf"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
+            >Download PDF</a
+          >
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
 
     <footer class="bg-blue-900 text-white py-8">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
-            <p class="text-gray-300">
-              Empowering professionals with resources, events, and community
-              support for PSP excellence.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2">
-             <li>
-                <a href="about.html" class="text-gray-300 hover:text-white"
-                  >About Us</a
-                >
-              </li>
-               <li>
-                <a href="https://www.nrb.org.np/departments/psd/" class="text-gray-300 hover:text-white"
-                  >NRB PSP Department</a
-                >
-              </li>
-        
-              <li>
-                <a href="events.html" class="text-gray-300 hover:text-white"
-                  >Events</a
-                >
-              </li>
-             
-              <li>
-                <a href="resources.html" class="text-gray-300 hover:text-white"
-                  >Resources</a
-                >
-              </li> 
-        
-            
-              <li>
-                <a href="advocacy.html" class="text-gray-300 hover:text-white"
-                  >Advocacy</a
-                >
-              </li>
-                <li>
-                <a href="https://www.nta.gov.np/" class="text-gray-300 hover:text-white"
-                  >NTA</a
-                >
-              </li>
-                <li>
-                <a href="  https://mof.gov.np/" class="text-gray-300 hover:text-white"
-                  >Ministry Of Finance</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-            <p class="text-gray-300">Email: pspa.nepal@gmail.com</p>
-            <p class="text-gray-300">Phone: (+977) 9866008482</p>
-            <p class="text-gray-300">Address: Kathmandu, Nepal</p>
-          </div>
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
+          <p class="text-gray-300">
+            Empowering professionals with resources, events, and community
+            support for PSP excellence.
+          </p>
         </div>
-        <div class="mt-8 text-center text-gray-300 text-xs">
-          © 2025 PSP Association. All rights reserved.
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="about.html" class="text-gray-300 hover:text-white">About Us</a>
+            </li>
+  
+            <li>
+              <a href="events.html" class="text-gray-300 hover:text-white">Events</a>
+            </li>
+
+            <li>
+              <a href="resources.html" class="text-gray-300 hover:text-white">Resources</a>
+            </li>
+
+
+            <li>
+              <a href="advocacy.html" class="text-gray-300 hover:text-white">Advocacy</a>
+            </li>
+           
+           
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Reference Links </h3>
+          <ul class="space-y-2">
+          
+            <li>
+              <a href="https://www.nrb.org.np/departments/psd/" class="text-gray-300 hover:text-white">NRB PSP
+                Department</a>
+            </li>
+
+            <li>
+              <a href="https://www.nta.gov.np/" class="text-gray-300 hover:text-white">Nepal Telecommunications Authority</a>
+            </li>
+            <li>
+              <a href="  https://mof.gov.np/" class="text-gray-300 hover:text-white">Ministry Of Finance</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-300">Email: pspa.nepal@gmail.com</p>
+          <p class="text-gray-300">Phone: (+977) 9866008482</p>
+          <p class="text-gray-300">Address: Kathmandu, Nepal</p>
         </div>
       </div>
-    </footer>
+      <div class="mt-8 text-center text-gray-300 text-xs">
+        © 2025 PSP Association. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
     <script src="js/main.js"></script>
   </body>
