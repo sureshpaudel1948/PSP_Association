@@ -24,33 +24,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (toggle && menu) {
       // Hover to show (desktop)
       toggle.addEventListener("mouseenter", () => {
-        menu.style.display = "block";
-        toggle.setAttribute("aria-expanded", "true");
+        if (window.innerWidth > 768) {
+          menu.style.display = "block";
+          toggle.setAttribute("aria-expanded", "true");
+        }
       });
 
       // Click to toggle (mobile/desktop persistence)
       toggle.addEventListener("click", (e) => {
         e.preventDefault();
         const isVisible = menu.style.display !== "none";
-        menu.style.display = isVisible ? "none" : "block";
-        toggle.setAttribute("aria-expanded", !isVisible);
+        if (window.innerWidth <= 768) {
+          menu.style.display = isVisible ? "none" : "block";
+          toggle.setAttribute("aria-expanded", !isVisible);
+        }
       });
 
       // Mouse leave to hide (desktop)
       toggle.addEventListener("mouseleave", () => {
-        // Delay hide to prevent flicker during transition to submenu
-        setTimeout(() => {
-          if (!menu.matches(":hover")) {
-            menu.style.display = "none";
-            toggle.setAttribute("aria-expanded", "false");
-          }
-        }, 200);
+        if (window.innerWidth > 768) {
+          setTimeout(() => {
+            if (!menu.matches(":hover")) {
+              menu.style.display = "none";
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          }, 200);
+        }
       });
 
       // Hide submenu on leave
       menu.addEventListener("mouseleave", () => {
-        menu.style.display = "none";
-        toggle.setAttribute("aria-expanded", "false");
+        if (window.innerWidth > 768) {
+          menu.style.display = "none";
+          toggle.setAttribute("aria-expanded", "false");
+        }
       });
     }
   });
@@ -74,13 +81,22 @@ document.addEventListener("DOMContentLoaded", () => {
     burger.addEventListener("click", () => {
       navUl.classList.toggle("active");
       burger.classList.toggle("active");
+      // Hide dropdowns when toggling menu
+      dropdownToggles.forEach(toggle => {
+        const menuId = dropdownMenus[toggle.id];
+        const menu = document.getElementById(menuId);
+        if (menu) menu.style.display = "none";
+      });
     });
 
     // Close mobile menu when clicking a link
     navUl.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
-        navUl.classList.remove("active");
-        burger.classList.remove("active");
+        if (window.innerWidth <= 768) {
+          navUl.classList.remove("active");
+          burger.classList.remove("active");
+          dropdownToggles.forEach(toggle => toggle.setAttribute("aria-expanded", "false"));
+        }
       });
     });
   }
@@ -112,11 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const renderPage = (num) => {
       pageRendering = true;
       pdfDoc.getPage(num).then((page) => {
-        // Dynamic scaling based on modal width
         const modalWidth =
-          document.querySelector("#pdf-modal .max-w-3xl").clientWidth - 32; // Subtract padding (p-4 = 32px)
+          document.querySelector("#pdf-modal .max-w-3xl").clientWidth - 32;
         const viewport = page.getViewport({ scale: 1 });
-        scale = Math.min(1.0, modalWidth / viewport.width); // Fit to modal width, max scale 1.0
+        scale = Math.min(1.0, modalWidth / viewport.width);
         const scaledViewport = page.getViewport({ scale });
 
         pdfCanvas.height = scaledViewport.height;
@@ -192,7 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
       queueRenderPage(pageNum);
     });
 
-    // Close modal with Escape key
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && pdfModal.classList.contains("show")) {
         closeModal.click();
