@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow">
+     <header class="bg-white shadow relative z-50">
       <nav
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
+        class="container mx-auto px-4 py-4 flex justify-between items-center relative"
       >
         <div class="text-2xl font-bold text-blue-900">
           <a href="index.html">
@@ -26,12 +26,14 @@
             />
           </a>
         </div>
+        <button class="burger md:hidden z-50 p-2 focus:outline-none">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
         <ul class="flex space-x-6 items-center">
           <li>
-            <a
-              href="index.html"
-              class="text-blue-600 hover:text-blue-800"
-              aria-current="page"
+            <a href="index.html" class="text-blue-600 hover:text-blue-800"
               >Home</a
             >
           </li>
@@ -60,7 +62,7 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
               id="about-dropdown"
               role="menu"
             >
@@ -80,10 +82,14 @@
                   >Executive Committee</a
                 >
               </li>
-               <li>
-              <a href="past-members.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                role="menuitem">Past Members</a>
-            </li>
+              <li>
+                <a
+                  href="past-members.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Past Members</a
+                >
+              </li>
               <li>
                 <a
                   href="member.html"
@@ -94,13 +100,12 @@
               </li>
             </ul>
           </li>
-
           <li>
             <a href="events.html" class="text-blue-600 hover:text-blue-800"
               >Events</a
             >
           </li>
-          <li class="relative">
+          <li class="relative group">
             <a
               href="media.html"
               class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
@@ -108,7 +113,8 @@
               aria-haspopup="true"
               aria-expanded="false"
               id="media-dropdown-toggle"
-              >Media
+            >
+              Media
               <svg
                 class="ml-1 w-4 h-4"
                 fill="none"
@@ -125,14 +131,14 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
               id="media-dropdown"
               role="menu"
             >
               <li>
                 <a
                   href="media.html#notice"
-                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
                   >Notice</a
                 >
@@ -179,7 +185,8 @@
               aria-haspopup="true"
               aria-expanded="false"
               id="resources-dropdown-toggle"
-              >Resources
+            >
+              Resources
               <svg
                 class="ml-1 w-4 h-4"
                 fill="none"
@@ -196,7 +203,7 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
               id="resources-dropdown"
               role="menu"
             >
@@ -235,7 +242,10 @@
             </ul>
           </li>
           <li>
-            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
+            <a
+              href="advocacy.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold"
+              aria-current="page"
               >Advocacy</a
             >
           </li>
