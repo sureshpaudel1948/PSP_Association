@@ -9,76 +9,83 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Dropdown Toggle for About
-  const aboutDropdownToggle = document.getElementById("about-dropdown-toggle");
-  const aboutDropdownMenu = document.getElementById("about-dropdown");
+  // Dropdown Toggles (About, Media, Resources)
+  const dropdownToggles = document.querySelectorAll('#about-dropdown-toggle, #media-dropdown-toggle, #resources-dropdown-toggle');
+  const dropdownMenus = {
+    'about-dropdown-toggle': 'about-dropdown',
+    'media-dropdown-toggle': 'media-dropdown',
+    'resources-dropdown-toggle': 'resources-dropdown'
+  };
 
-  if (aboutDropdownToggle && aboutDropdownMenu) {
-    aboutDropdownToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      aboutDropdownMenu.classList.toggle("hidden");
-      aboutDropdownToggle.setAttribute(
-        "aria-expanded",
-        !aboutDropdownMenu.classList.contains("hidden")
-      );
-    });
-  }
+  dropdownToggles.forEach(toggle => {
+    const menuId = dropdownMenus[toggle.id];
+    const menu = document.getElementById(menuId);
 
-  // Dropdown Toggle for Resources
-  const resourcesDropdownToggle = document.getElementById(
-    "resources-dropdown-toggle"
-  );
-  const resourcesDropdownMenu = document.getElementById("resources-dropdown");
+    if (toggle && menu) {
+      // Hover to show (desktop)
+      toggle.addEventListener("mouseenter", () => {
+        menu.style.display = "block";
+        toggle.setAttribute("aria-expanded", "true");
+      });
 
-  if (resourcesDropdownToggle && resourcesDropdownMenu) {
-    resourcesDropdownToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      resourcesDropdownMenu.classList.toggle("show");
-      resourcesDropdownToggle.setAttribute(
-        "aria-expanded",
-        resourcesDropdownMenu.classList.contains("show")
-      );
-    });
-  }
+      // Click to toggle (mobile/desktop persistence)
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isVisible = menu.style.display !== "none";
+        menu.style.display = isVisible ? "none" : "block";
+        toggle.setAttribute("aria-expanded", !isVisible);
+      });
 
-  // Dropdown Toggle for Media
-  const mediaDropdownToggle = document.getElementById("media-dropdown-toggle");
-  const mediaDropdownMenu = document.getElementById("media-dropdown");
+      // Mouse leave to hide (desktop)
+      toggle.addEventListener("mouseleave", () => {
+        // Delay hide to prevent flicker during transition to submenu
+        setTimeout(() => {
+          if (!menu.matches(":hover")) {
+            menu.style.display = "none";
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        }, 200);
+      });
 
-  if (mediaDropdownToggle && mediaDropdownMenu) {
-    mediaDropdownToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      mediaDropdownMenu.classList.toggle("show");
-      mediaDropdownToggle.setAttribute(
-        "aria-expanded",
-        mediaDropdownMenu.classList.contains("show")
-      );
-    });
-  }
-
-  // Close both dropdowns when clicking outside
-  document.addEventListener("click", (e) => {
-    if (
-      resourcesDropdownToggle &&
-      resourcesDropdownMenu &&
-      !resourcesDropdownToggle.contains(e.target) &&
-      !resourcesDropdownMenu.contains(e.target)
-    ) {
-      resourcesDropdownMenu.classList.remove("show");
-      resourcesDropdownToggle.setAttribute("aria-expanded", "false");
-    }
-    if (
-      mediaDropdownToggle &&
-      mediaDropdownMenu &&
-      !mediaDropdownToggle.contains(e.target) &&
-      !mediaDropdownMenu.contains(e.target)
-    ) {
-      mediaDropdownMenu.classList.remove("show");
-      mediaDropdownToggle.setAttribute("aria-expanded", "false");
+      // Hide submenu on leave
+      menu.addEventListener("mouseleave", () => {
+        menu.style.display = "none";
+        toggle.setAttribute("aria-expanded", "false");
+      });
     }
   });
 
-  // PDF Viewer
+  // Close all dropdowns when clicking outside
+  document.addEventListener("click", (e) => {
+    dropdownToggles.forEach(toggle => {
+      const menuId = dropdownMenus[toggle.id];
+      const menu = document.getElementById(menuId);
+      if (toggle && menu && !toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
+  // Mobile Burger Menu Toggle
+  const burger = document.querySelector(".burger");
+  const navUl = document.querySelector("nav ul");
+  if (burger && navUl) {
+    burger.addEventListener("click", () => {
+      navUl.classList.toggle("active");
+      burger.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking a link
+    navUl.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navUl.classList.remove("active");
+        burger.classList.remove("active");
+      });
+    });
+  }
+
+  // PDF Viewer (unchanged)
   const pdfModal = document.getElementById("pdf-modal");
   const pdfCanvas = document.getElementById("pdf-canvas");
   const closeModal = document.getElementById("close-modal");
@@ -192,5 +199,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
 });
