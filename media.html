@@ -16,9 +16,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
   </head>
   <body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow">
+   <header class="bg-white shadow relative z-50">
       <nav
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
+        class="container mx-auto px-4 py-4 flex justify-between items-center relative"
       >
         <div class="text-2xl font-bold text-blue-900">
           <a href="index.html">
@@ -30,6 +30,11 @@
             />
           </a>
         </div>
+        <button class="burger md:hidden z-50 p-2 focus:outline-none">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
         <ul class="flex space-x-6 items-center">
           <li>
             <a href="index.html" class="text-blue-600 hover:text-blue-800"
@@ -37,68 +42,74 @@
             >
           </li>
           <li class="relative group">
-  <a
-    href="about.html"
-    class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-    aria-haspopup="true"
-    aria-expanded="false"
-    id="about-dropdown-toggle"
-  >
-    About
-    <svg
-      class="ml-1 w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M19 9l-7 7-7-7"
-      ></path>
-    </svg>
-  </a>
-  <ul
-    class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
-    id="about-dropdown"
-    role="menu"
-  >
-    <li>
-      <a
-        href="about.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >About Us</a>
-    </li>
-    <li>
-      <a
-        href="executive.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >Executive Committee</a>
-    </li>
-     <li>
-              <a href="past-members.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                role="menuitem">Past Members</a>
-            </li>
-    <li>
-      <a
-        href="member.html"
-        class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-        role="menuitem"
-      >Member Wallets</a>
-    </li>
-  </ul>
-</li>
-
+            <a
+              href="about.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="about-dropdown-toggle"
+            >
+              About
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
+              id="about-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="about.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="executive.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Executive Committee</a
+                >
+              </li>
+              <li>
+                <a
+                  href="past-members.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Past Members</a
+                >
+              </li>
+              <li>
+                <a
+                  href="member.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Member Wallets</a
+                >
+              </li>
+            </ul>
+          </li>
           <li>
             <a href="events.html" class="text-blue-600 hover:text-blue-800"
               >Events</a
             >
           </li>
-          <li class="relative">
+          <li class="relative group">
             <a
               href="media.html"
               class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
@@ -106,7 +117,8 @@
               aria-haspopup="true"
               aria-expanded="false"
               id="media-dropdown-toggle"
-              >Media
+            >
+              Media
               <svg
                 class="ml-1 w-4 h-4"
                 fill="none"
@@ -123,21 +135,21 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
               id="media-dropdown"
               role="menu"
             >
               <li>
                 <a
-                  href="#notice"
-                  class="block px-4 py-2 text-blue-6 00 hover:bg-blue-50 hover:text-blue-800"
+                  href="media.html#notice"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
                   >Notice</a
                 >
               </li>
               <li>
                 <a
-                  href="#newsletter"
+                  href="media.html#newsletter"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
                   >Newsletter</a
@@ -145,7 +157,7 @@
               </li>
               <li>
                 <a
-                  href="#blogs"
+                  href="media.html#blogs"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
                   >Blogs</a
@@ -153,7 +165,7 @@
               </li>
               <li>
                 <a
-                  href="#publications"
+                  href="media.html#publications"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
                   >Publications</a
@@ -161,7 +173,7 @@
               </li>
               <li>
                 <a
-                  href="#gallery"
+                  href="media.html#gallery"
                   class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
                   role="menuitem"
                   >Gallery</a
@@ -169,14 +181,16 @@
               </li>
             </ul>
           </li>
-          <li class="relative">
+          <li class="relative group">
             <a
               href="resources.html"
-              class="text-blue-600 hover:text-blue-800 flex items-center"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
               aria-haspopup="true"
               aria-expanded="false"
               id="resources-dropdown-toggle"
-              >Resources
+            >
+              Resources
               <svg
                 class="ml-1 w-4 h-4"
                 fill="none"
@@ -193,7 +207,7 @@
               </svg>
             </a>
             <ul
-              class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 z-10"
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
               id="resources-dropdown"
               role="menu"
             >
@@ -232,12 +246,17 @@
             </ul>
           </li>
           <li>
-            <a href="advocacy.html" class="text-blue-600 hover:text-blue-800"
+            <a
+              href="advocacy.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold"
+              aria-current="page"
               >Advocacy</a
             >
           </li>
           <li>
-            <a href="contact.html" class="text-blue-600 hover:text-blue-800"
+            <a
+              href="contact.html"
+              class="text-blue-600 hover:text-blue-800"
               >Contact</a
             >
           </li>
