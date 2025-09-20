@@ -2,21 +2,19 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(130deg,
-      #e6f0fa 0%,
-      #7ec3ff 90%,
-      #c3d6ff 60%,
-      #ffffff 98%);
+  background: linear-gradient(170deg, #e6f0fa 0%, #ffffff 100%);
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
+  z-index: 0;
 }
 
-/* Subtle wave pattern using pseudo-element */
+/* Subtle wave pattern with background image */
 body::before {
   content: "";
   position: absolute;
@@ -24,12 +22,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(105deg,
-      rgba(255, 255, 255, 0.29),
-      rgba(255, 255, 255, 0.1) 10px,
-      transparent 20px,
-      transparent 110px);
-  opacity: 0.3;
+  background: repeating-linear-gradient(165deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 10px, transparent 20px, transparent 110px);
+  background-image: url(../img/digital.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.24;
   z-index: -1;
   pointer-events: none;
 }
@@ -40,12 +38,31 @@ body::before {
 }
 
 nav ul li a {
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   font-weight: 400;
+}
+
+header {
+  background: linear-gradient(90deg, #ffffff 0%, #e6f0fa 100%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 50;
+}
+
+header nav ul li a:hover {
+  color: #1e40af;
+  transform: translateY(-2px);
+}
+
+#about-dropdown,
+#media-dropdown,
+#resources-dropdown {
+  z-index: 1000;
 }
 
 .form input:focus {
   border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -56,16 +73,55 @@ input:invalid:focus {
   transition: all 0.3s ease;
 }
 
-/* Card hover effect */
+/* Card hover and base styling */
+.bg-white {
+  background: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 .bg-white:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ffffff 0%, #f9fbff 100%);
 }
 
+/* Button enhancements */
+.bg-blue-600 {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.bg-blue-600:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Section container styling */
+section {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
 /* Remove fixed width and height for w-full */
 .w-full {
   width: 100%;
   height: auto;
+}
+
+/* Footer enhancements */
+footer {
+  background: linear-gradient(180deg, #1e3a8a 0%, #2563eb 100%);
+  color: #ffffff;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+}
+footer a:hover {
+  color: #bbf7d0;
+  transform: translateY(-2px);
 }
 
 /* Responsive adjustments */
@@ -79,7 +135,20 @@ input:invalid:focus {
   }
 
   nav ul {
+    display: none;
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ffffff 0%, #e6f0fa 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    display: flex;
   }
 
   #about-dropdown,
@@ -89,6 +158,9 @@ input:invalid:focus {
     width: 100%;
     opacity: 1;
     display: none;
+    z-index: 1001;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .group:hover #about-dropdown,
@@ -97,10 +169,42 @@ input:invalid:focus {
     display: block;
   }
 
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #2563eb;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  .burger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   footer a,
-p {
-  transition: color 0.3s ease, transform 0.3s ease;
-  font-size: 0.8em;
+  p {
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 0.8em;
+  }
+}
+
+.w-full {
+  width: 100%;
+  height: auto;
 }
 
 .member .memb-logo {
@@ -131,16 +235,12 @@ p {
 .group:hover #resources-dropdown,
 #resources-dropdown.show {
   display: block;
+  z-index: 1001;
 }
 
 #resources-dropdown {
   display: none;
 }
-
-/* #resources-dropdown {
-    width: 100%;
-    left: 0;
-  } */
 
 /* PDF viewer modal styling (unchanged unless needed) */
 #pdf-modal {
@@ -160,74 +260,6 @@ p {
 #pdf-canvas {
   max-width: 100%;
   border: 1px solid #e5e7eb;
-  height: auto;
-}
-
-}
-
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  #pdf-modal .modal-content {
-    max-height: 95vh;
-    width: 40%;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 2560px) {
-  #pdf-modal .modal-content {
-    max-height: 95vh;
-    width: 40%;
-  }
-}
-
-footer a,
-p {
-  transition: color 0.3s ease;
-  font-size: 0.8em;
-}
-
-.member .memb-logo {
-  width: 200px;
-  height: 170px;
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.memb-logo .mem_logo {
-  max-width: 190px;
-  max-height: 150px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-/* Dropdown menu styling */
-.group:hover #resources-dropdown,
-#resources-dropdown.show {
-  display: block;
-}
-
-#resources-dropdown {
-  display: none;
-}
-
-/* PDF viewer modal styling */
-#pdf-modal {
-  transition: opacity 0.3s ease;
-}
-
-#pdf-modal.show {
-  display: flex;
-}
-
-#pdf-canvas {
-  border: 1px solid #e5e7eb;
-  max-width: 100%;
   height: auto;
 }
 
@@ -298,4 +330,18 @@ p {
 
 .close:hover {
   color: #000;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #pdf-modal .modal-content {
+    max-height: 95vh;
+    width: 40%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 2560px) {
+  #pdf-modal .modal-content {
+    max-height: 95vh;
+    width: 40%;
+  }
 }
