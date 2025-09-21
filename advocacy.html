@@ -11,12 +11,13 @@
     <link rel="icon" href="assets/img/logo.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-<script>
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
-</script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+    </script>
   </head>
   <body class="bg-gray-100 font-sans">
-      <header class="bg-white shadow relative z-50">
+    <header class="bg-white shadow relative z-50">
       <nav
         class="container mx-auto px-4 py-4 flex justify-between items-center relative"
       >
@@ -254,9 +255,7 @@
             >
           </li>
           <li>
-            <a
-              href="contact.html"
-              class="text-blue-600 hover:text-blue-800"
+            <a href="contact.html" class="text-blue-600 hover:text-blue-800"
               >Contact</a
             >
           </li>
@@ -271,7 +270,7 @@
       </nav>
     </header>
 
-    <main class="container mx-auto px-4 py-12">
+   <main class="container mx-auto px-4 py-12">
   <!-- Advocacy Overview Section -->
   <section class="text-center mb-12">
     <h1 class="text-4xl font-bold text-blue-900 mb-4">Advocacy</h1>
@@ -285,13 +284,13 @@
   </section>
 
   <!-- Policy Advocacy Briefs Section -->
-  <section class="mb-12">
+  <section class="mb-12" id="policy-briefs">
     <h2 class="text-2xl font-semibold text-blue-900 mb-6">
       Policy Advocacy Briefs
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
       >
         <img
           src="assets/img/pdf_icon.png"
@@ -305,32 +304,15 @@
           A brief advocating for policies to expand access to digital
           financial services in rural Nepal.
         </p>
-        <div class="mt-4">
-          <object
-            data="resources/pdfs/financial_inclusion_brief_2025.pdf"
-            type="application/pdf"
-            class="w-full h-64 border rounded-lg"
-            aria-label="Promoting Financial Inclusion 2025 PDF"
-          >
-            <p>
-              Your browser does not support PDFs. <a
-                href="resources/pdfs/financial_inclusion_brief_2025.pdf"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800"
-                >Download the PDF</a
-              >.
-            </p>
-          </object>
-          <a
-            href="resources/pdfs/financial_inclusion_brief_2025.pdf"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
-            >Download PDF</a
-          >
-        </div>
+        <button
+          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+          data-pdf="resources/pdfs/financial_inclusion_brief_2025.pdf"
+        >
+          View PDF
+        </button>
       </article>
       <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
       >
         <img
           src="assets/img/pdf_icon.png"
@@ -344,32 +326,15 @@
           Recommendations for strengthening cybersecurity measures for
           Payment Service Providers.
         </p>
-        <div class="mt-4">
-          <object
-            data="resources/pdfs/cybersecurity_brief_2025.pdf"
-            type="application/pdf"
-            class="w-full h-64 border rounded-lg"
-            aria-label="Enhancing Cybersecurity in PSPs 2025 PDF"
-          >
-            <p>
-              Your browser does not support PDFs. <a
-                href="resources/pdfs/cybersecurity_brief_2025.pdf"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800"
-                >Download the PDF</a
-              >.
-            </p>
-          </object>
-          <a
-            href="resources/pdfs/cybersecurity_brief_2025.pdf"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
-            >Download PDF</a
-          >
-        </div>
+        <button
+          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+          data-pdf="resources/pdfs/cybersecurity_brief_2025.pdf"
+        >
+          View PDF
+        </button>
       </article>
       <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
       >
         <img
           src="assets/img/pdf_icon.png"
@@ -383,41 +348,24 @@
           Policy brief on simplifying licensing processes for new PSPs in
           Nepal.
         </p>
-        <div class="mt-4">
-          <object
-            data="resources/pdfs/licensing_brief_2024.pdf"
-            type="application/pdf"
-            class="w-full h-64 border rounded-lg"
-            aria-label="Streamlining Licensing for PSPs 2024 PDF"
-          >
-            <p>
-              Your browser does not support PDFs. <a
-                href="resources/pdfs/licensing_brief_2024.pdf"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800"
-                >Download the PDF</a
-              >.
-            </p>
-          </object>
-          <a
-            href="resources/pdfs/licensing_brief_2024.pdf"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
-            >Download PDF</a
-          >
-        </div>
+        <button
+          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+          data-pdf="resources/pdfs/licensing_brief_2024.pdf"
+        >
+          View PDF
+        </button>
       </article>
     </div>
   </section>
 
   <!-- Regulatory Updates Section -->
-  <section class="mb-12">
+  <section class="mb-12" id="regulatory-updates">
     <h2 class="text-2xl font-semibold text-blue-900 mb-6">
       Regulatory Updates
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
       >
         <img
           src="assets/img/pdf_icon.png"
@@ -431,32 +379,15 @@
           Latest updates to Nepal Rastra Bank’s directives for payment
           systems.
         </p>
-        <div class="mt-4">
-          <object
-            data="resources/pdfs/nrb_directives_update_2025.pdf"
-            type="application/pdf"
-            class="w-full h-64 border rounded-lg"
-            aria-label="NRB Payment System Directives Update 2025 PDF"
-          >
-            <p>
-              Your browser does not support PDFs. <a
-                href="resources/pdfs/nrb_directives_update_2025.pdf"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800"
-                >Download the PDF</a
-              >.
-            </p>
-          </object>
-          <a
-            href="resources/pdfs/nrb_directives_update_2025.pdf"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
-            >Download PDF</a
-          >
-        </div>
+        <button
+          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+          data-pdf="resources/pdfs/nrb_directives_update_2025.pdf"
+        >
+          View PDF
+        </button>
       </article>
       <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
       >
         <img
           src="assets/img/pdf_icon.png"
@@ -470,32 +401,15 @@
           Revised guidelines for anti-money laundering and counter-terrorism
           financing compliance.
         </p>
-        <div class="mt-4">
-          <object
-            data="resources/pdfs/aml_cft_guidelines_2025.pdf"
-            type="application/pdf"
-            class="w-full h-64 border rounded-lg"
-            aria-label="AML/CFT Compliance Guidelines 2025 PDF"
-          >
-            <p>
-              Your browser does not support PDFs. <a
-                href="resources/pdfs/aml_cft_guidelines_2025.pdf"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800"
-                >Download the PDF</a
-              >.
-            </p>
-          </object>
-          <a
-            href="resources/pdfs/aml_cft_guidelines_2025.pdf"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
-            >Download PDF</a
-          >
-        </div>
+        <button
+          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+          data-pdf="resources/pdfs/aml_cft_guidelines_2025.pdf"
+        >
+          View PDF
+        </button>
       </article>
       <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 relative"
+        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
       >
         <img
           src="assets/img/pdf_icon.png"
@@ -508,96 +422,261 @@
         <p class="text-gray-600">
           Updates to regulations governing e-commerce transactions in Nepal.
         </p>
-        <div class="mt-4">
-          <object
-            data="resources/pdfs/ecommerce_regulation_2025.pdf"
-            type="application/pdf"
-            class="w-full h-64 border rounded-lg"
-            aria-label="E-commerce Regulation Changes 2025 PDF"
-          >
-            <p>
-              Your browser does not support PDFs. <a
-                href="resources/pdfs/ecommerce_regulation_2025.pdf"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800"
-                >Download the PDF</a
-              >.
-            </p>
-          </object>
-          <a
-            href="resources/pdfs/ecommerce_regulation_2025.pdf"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800 mt-2 inline-block"
-            >Download PDF</a
-          >
-        </div>
+        <button
+          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+          data-pdf="resources/pdfs/ecommerce_regulation_2025.pdf"
+        >
+          View PDF
+        </button>
       </article>
     </div>
   </section>
 </main>
 
-    <footer class="bg-blue-900 text-white py-8">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
-          <p class="text-gray-300">
-            Empowering professionals with resources, events, and community
-            support for PSP excellence.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="about.html" class="text-gray-300 hover:text-white">About Us</a>
-            </li>
-  
-            <li>
-              <a href="events.html" class="text-gray-300 hover:text-white">Events</a>
-            </li>
-
-            <li>
-              <a href="resources.html" class="text-gray-300 hover:text-white">Resources</a>
-            </li>
-
-
-            <li>
-              <a href="advocacy.html" class="text-gray-300 hover:text-white">Advocacy</a>
-            </li>
-           
-           
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Reference Links </h3>
-          <ul class="space-y-2">
-          
-            <li>
-              <a href="https://www.nrb.org.np/departments/psd/" class="text-gray-300 hover:text-white">NRB PSP
-                Department</a>
-            </li>
-
-            <li>
-              <a href="https://www.nta.gov.np/" class="text-gray-300 hover:text-white">Nepal Telecommunications Authority</a>
-            </li>
-            <li>
-              <a href="  https://mof.gov.np/" class="text-gray-300 hover:text-white">Ministry Of Finance</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-          <p class="text-gray-300">Email: pspa.nepal@gmail.com</p>
-          <p class="text-gray-300">Phone: (+977) 9866008482</p>
-          <p class="text-gray-300">Address: Kathmandu, Nepal</p>
-        </div>
-      </div>
-      <div class="mt-8 text-center text-gray-300 text-xs">
-        © 2025 PSP Association. All rights reserved.
-      </div>
+<!-- PDF Viewer Modal -->
+<div
+  id="pdf-modal"
+  class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50 modal animate-fade-in"
+  role="dialog"
+  aria-labelledby="pdf-modal-title"
+  aria-modal="true"
+>
+  <div
+    class="bg-white rounded-lg w-full max-w-4xl md:max-w-3xl sm:max-w-[90%] h-[80vh] md:h-[70vh] sm:h-[85vh] flex flex-col relative modal-content"
+  >
+    <div class="p-4 border-b flex justify-between items-center">
+      <h2 id="pdf-modal-title" class="text-xl font-semibold text-blue-900">
+        PDF Viewer
+      </h2>
+      <button
+        id="close-modal"
+        class="text-gray-600 hover:text-gray-800 focus:outline-none z-10 close"
+        aria-label="Close PDF Viewer"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
     </div>
-  </footer>
+    <div class="flex-1 overflow-y-auto p-4">
+      <canvas id="pdf-canvas" class="w-full h-full" style="max-width: 100%;"></canvas>
+    </div>
+    <div
+      id="pdf-controls"
+      class="p-4 border-t bg-white sticky bottom-0 flex justify-between items-center"
+    >
+      <button
+        id="prev-page"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+        disabled
+      >
+        Previous
+      </button>
+      <span id="page-info" class="text-gray-600"
+        >Page 1 of <span id="total-pages">1</span></span
+      >
+      <button
+        id="next-page"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+        disabled
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("pdf-modal");
+    const canvas = document.getElementById("pdf-canvas");
+    const ctx = canvas.getContext("2d");
+    const prevPageBtn = document.getElementById("prev-page");
+    const nextPageBtn = document.getElementById("next-page");
+    const pageInfo = document.getElementById("page-info");
+    const totalPagesSpan = document.getElementById("total-pages");
+    const closeModalBtn = document.getElementById("close-modal");
+
+    let pdfDoc = null;
+    let pageNum = 1;
+
+    document.querySelectorAll(".view-pdf").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const pdfPath = button.getAttribute("data-pdf");
+        try {
+          pdfDoc = await pdfjsLib.getDocument(pdfPath).promise;
+          totalPagesSpan.textContent = pdfDoc.numPages;
+          pageNum = 1;
+          renderPage();
+          modal.classList.remove("hidden");
+          modal.classList.add("show");
+        } catch (error) {
+          console.error("Error loading PDF:", error);
+          alert(
+            "Failed to load PDF. Please check the file path or contact support."
+          );
+        }
+      });
+    });
+
+    async function renderPage() {
+      if (!pdfDoc || pageNum < 1 || pageNum > pdfDoc.numPages) return;
+
+      const page = await pdfDoc.getPage(pageNum);
+      const container = document.querySelector(
+        "#pdf-modal > .modal-content"
+      );
+      const viewportWidth = container.clientWidth - 32; // Account for padding
+      const viewportHeight = container.clientHeight - 120; // Account for header and controls
+      const scale = Math.min(
+        viewportWidth / page.getViewport({ scale: 0.5 }).width,
+        viewportHeight / page.getViewport({ scale: 0.5 }).height
+      );
+      const scaledViewport = page.getViewport({ scale: scale });
+
+      canvas.height = scaledViewport.height;
+      canvas.width = scaledViewport.width;
+      canvas.style.maxWidth = "100%";
+
+      const renderContext = {
+        canvasContext: ctx,
+        viewport: scaledViewport,
+      };
+      await page.render(renderContext);
+
+      pageInfo.textContent = `Page ${pageNum} of ${pdfDoc.numPages}`;
+      prevPageBtn.disabled = pageNum <= 1;
+      nextPageBtn.disabled = pageNum >= pdfDoc.numPages;
+    }
+
+    prevPageBtn.addEventListener("click", () => {
+      if (pageNum > 1) {
+        pageNum--;
+        renderPage();
+      }
+    });
+
+    nextPageBtn.addEventListener("click", () => {
+      if (pageNum < pdfDoc.numPages) {
+        pageNum++;
+        renderPage();
+      }
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("show");
+      pageNum = 1;
+      canvas.height = 0;
+      canvas.width = 0;
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("show");
+        pageNum = 1;
+        canvas.height = 0;
+        canvas.width = 0;
+      }
+    });
+
+    // Resize handler to re-render on window resize
+    window.addEventListener("resize", () => {
+      if (modal.classList.contains("show")) {
+        renderPage();
+      }
+    });
+  });
+</script>
+    <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
+            <p class="text-gray-300">
+              Empowering professionals with resources, events, and community
+              support for PSP excellence.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+
+              <li>
+                <a href="events.html" class="text-gray-300 hover:text-white"
+                  >Events</a
+                >
+              </li>
+
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white"
+                  >Resources</a
+                >
+              </li>
+
+              <li>
+                <a href="advocacy.html" class="text-gray-300 hover:text-white"
+                  >Advocacy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Reference Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://www.nrb.org.np/departments/psd/"
+                  class="text-gray-300 hover:text-white"
+                  >NRB PSP Department</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://www.nta.gov.np/"
+                  class="text-gray-300 hover:text-white"
+                  >Nepal Telecommunications Authority</a
+                >
+              </li>
+              <li>
+                <a
+                  href="  https://mof.gov.np/"
+                  class="text-gray-300 hover:text-white"
+                  >Ministry Of Finance</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-300">Email: pspa.nepal@gmail.com</p>
+            <p class="text-gray-300">Phone: (+977) 9866008482</p>
+            <p class="text-gray-300">Address: Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-300 text-xs">
+          © 2025 PSP Association. All rights reserved.
+        </div>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
   </body>
