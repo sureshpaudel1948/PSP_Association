@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
   </head>
   <body class="bg-gray-100 font-sans overflow-x-hidden">
-   <header class="bg-white shadow relative z-50">
+    <header class="bg-white shadow relative z-50">
       <nav
         class="container mx-auto px-4 py-4 flex justify-between items-center relative"
       >
@@ -252,9 +252,7 @@
             >
           </li>
           <li>
-            <a
-              href="contact.html"
-              class="text-blue-600 hover:text-blue-800"
+            <a href="contact.html" class="text-blue-600 hover:text-blue-800"
               >Contact</a
             >
           </li>
@@ -341,7 +339,9 @@
                   d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 005.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 ></path>
               </svg>
-              <span class="text-4xl font-bold text-blue-900">2.676 Crores</span>
+              <span class="text-4xl font-bold text-blue-900"
+                >26.76 Millions</span
+              >
             </div>
             <p class="text-lg font-semibold text-gray-700">Total Users</p>
           </div>
@@ -366,7 +366,9 @@
                   d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 ></path>
               </svg>
-              <span class="text-4xl font-bold text-blue-900">400,929,083</span>
+              <span class="text-4xl font-bold text-blue-900"
+                >400.9 Millions</span
+              >
             </div>
             <p class="text-lg font-semibold text-gray-700">
               Number Of Transactions Processed Per Year
@@ -536,32 +538,46 @@
       </section>
 
       <!-- Milestone Journey Section -->
-       <!-- Milestone Journey Section -->
       <section class="mb-12">
         <h2
           class="text-2xl md:text-3xl font-semibold text-blue-900 mb-6 text-center transform transition-all duration-300 hover:scale-105"
         >
-          Milestone Journey of PSP from 2015 tillnow
+          PSPs at Glance (through&nbsp;numbers)
         </h2>
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6">
-          <div class="w-full md:w-1/2">
-            <canvas id="milestoneChart" class="w-full h-64 md:h-80"></canvas>
+        <div
+          class="p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6"
+        >
+          <div class="w-full md:w-1/2 relative">
+            <canvas
+              id="backgroundCanvas"
+              class="w-full h-64 md:h-80 absolute top-0 left-0 z-0"
+            ></canvas>
+            <canvas
+              id="milestoneChart"
+              class="w-full h-64 md:h-80 relative z-10"
+            ></canvas>
           </div>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6"
+        >
           <div class="w-full md:w-1/2 overflow-x-auto">
             <table class="w-full text-left border-collapse">
               <thead>
                 <tr class="bg-blue-100">
                   <th class="p-3 text-blue-900 font-semibold">Year</th>
                   <th class="p-3 text-blue-900 font-semibold">FY 77/78</th>
-                  <th class="p-3 text-blue-900 font-semibold">FY 78/79</th>
-                  <th class="p-3 text-blue-900 font-semibold">FY 79/80</th>
+                  <th class="p-3 text-blue-900 font-semibold">FY 78/77</th>
+                  <th class="p-3 text-blue-900 font-semibold">FY 77/80</th>
                   <th class="p-3 text-blue-900 font-semibold">FY 80/81</th>
                   <th class="p-3 text-blue-900 font-semibold">FY 81/82</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="border-t">
-                  <td class="p-3 font-medium text-gray-700">Wallet Users (in Million)</td>
+                  <td class="p-3 font-medium text-gray-700">
+                    Wallet Users (in Million)
+                  </td>
                   <td class="p-3">8.886</td>
                   <td class="p-3">13.676</td>
                   <td class="p-3">18.94</td>
@@ -569,7 +585,9 @@
                   <td class="p-3">26.766</td>
                 </tr>
                 <tr class="border-t">
-                  <td class="p-3 font-medium text-gray-700">Number of Transactions (in Million)</td>
+                  <td class="p-3 font-medium text-gray-700">
+                    Number of Transactions (in Million)
+                  </td>
                   <td class="p-3">124.95</td>
                   <td class="p-3">167.5</td>
                   <td class="p-3">213.37</td>
@@ -577,7 +595,9 @@
                   <td class="p-3">400.9</td>
                 </tr>
                 <tr class="border-t">
-                  <td class="p-3 font-medium text-gray-700">Transaction Volume (in Billions)</td>
+                  <td class="p-3 font-medium text-gray-700">
+                    Transaction Volume (in Billions)
+                  </td>
                   <td class="p-3">114.432</td>
                   <td class="p-3">184.293</td>
                   <td class="p-3">219.807</td>
@@ -755,10 +775,98 @@
         document.getElementById(modalId).style.display = "none";
       }
 
-      // Line Graph with Chart.js
       document.addEventListener("DOMContentLoaded", () => {
-        const ctx = document.getElementById("milestoneChart").getContext("2d");
-        new Chart(ctx, {
+        // Get both canvases
+        const backgroundCtx = document
+          .getElementById("backgroundCanvas")
+          .getContext("2d");
+        const chartCtx = document
+          .getElementById("milestoneChart")
+          .getContext("2d");
+
+        // Draw professional background on backgroundCanvas
+        const width = backgroundCtx.canvas.width;
+        const height = backgroundCtx.canvas.height;
+
+        // Professional blue gradient base
+        const baseGradient = backgroundCtx.createLinearGradient(
+          0,
+          0,
+          0,
+          height
+        );
+        baseGradient.addColorStop(0, "rgba(230, 240, 250, 1)"); // Light blue
+        baseGradient.addColorStop(0.5, "rgba(200, 220, 240, 1)"); // Softer blue
+        baseGradient.addColorStop(1, "rgba(240, 245, 250, 1)"); // Near-white
+        backgroundCtx.fillStyle = baseGradient;
+        backgroundCtx.fillRect(0, 0, width, height);
+
+        // Simple waves with blue and gray tones
+        backgroundCtx.beginPath();
+        // Wave 1
+        for (let x = 0; x <= width; x += 50) {
+          const y = height * 0.7 + Math.sin(x * 0.03) * 20;
+          if (x === 0) backgroundCtx.moveTo(x, y);
+          backgroundCtx.lineTo(x, y);
+        }
+        const waveGradient1 = backgroundCtx.createLinearGradient(
+          0,
+          height * 0.7,
+          0,
+          height
+        );
+        waveGradient1.addColorStop(0, "rgba(37, 99, 235, 0.1)"); // Light blue
+        waveGradient1.addColorStop(1, "rgba(37, 99, 235, 0)"); // Fade out
+        backgroundCtx.fillStyle = waveGradient1;
+        backgroundCtx.lineTo(width, height);
+        backgroundCtx.lineTo(0, height);
+        backgroundCtx.closePath();
+        backgroundCtx.fill();
+
+        // Wave 2
+        backgroundCtx.beginPath();
+        for (let x = 0; x <= width; x += 50) {
+          const y = height * 0.75 + Math.sin(x * 0.04) * 15;
+          if (x === 0) backgroundCtx.moveTo(x, y);
+          backgroundCtx.lineTo(x, y);
+        }
+        const waveGradient2 = backgroundCtx.createLinearGradient(
+          0,
+          height * 0.75,
+          0,
+          height
+        );
+        waveGradient2.addColorStop(0, "rgba(150, 170, 190, 0.3)"); // Light gray
+        waveGradient2.addColorStop(1, "rgba(150, 170, 190, 0)"); // Fade out
+        backgroundCtx.fillStyle = waveGradient2;
+        backgroundCtx.lineTo(width, height);
+        backgroundCtx.lineTo(0, height);
+        backgroundCtx.closePath();
+        backgroundCtx.fill();
+
+        // Wave 3 (subtle)
+        backgroundCtx.beginPath();
+        for (let x = 0; x <= width; x += 50) {
+          const y = height * 0.8 + Math.sin(x * 0.02) * 10;
+          if (x === 0) backgroundCtx.moveTo(x, y);
+          backgroundCtx.lineTo(x, y);
+        }
+        const waveGradient3 = backgroundCtx.createLinearGradient(
+          0,
+          height * 0.9,
+          0,
+          height
+        );
+        waveGradient3.addColorStop(0, "rgba(100, 120, 140, 0.2)"); // Darker gray
+        waveGradient3.addColorStop(1, "rgba(100, 120, 140, 0)"); // Fade out
+        backgroundCtx.fillStyle = waveGradient3;
+        backgroundCtx.lineTo(width, height);
+        backgroundCtx.lineTo(0, height);
+        backgroundCtx.closePath();
+        backgroundCtx.fill();
+
+        // Initialize Chart.js on the foreground canvas
+        new Chart(chartCtx, {
           type: "line",
           data: {
             labels: [
@@ -773,7 +881,7 @@
                 label: "Wallet Users (Million)",
                 data: [8.886, 13.676, 18.94, 23.46, 26.766],
                 borderColor: "#2563eb",
-                backgroundColor: "rgba(37, 99, 235, 0.2)",
+                backgroundColor: "rgba(57, 99, 235, 0.2)",
                 borderWidth: 2,
                 fill: true,
                 tension: 0.4,
@@ -808,17 +916,29 @@
                   display: true,
                   text: "Values (Million/Billion)",
                 },
+                grid: {
+                  color: "rgba(200, 220, 240, 0.5)", // Subtle blue grid
+                },
               },
               x: {
                 title: {
                   display: true,
                   text: "Financial Year",
                 },
+                grid: {
+                  color: "rgba(200, 220, 240, 0.5)", // Subtle blue grid
+                },
               },
             },
             plugins: {
               legend: {
                 position: "top",
+                labels: {
+                  color: "#1e40af", // Matches navbar text
+                  font: {
+                    size: 14,
+                  },
+                },
               },
               tooltip: {
                 callbacks: {
@@ -832,12 +952,14 @@
                     return `${label}: ${context.parsed.y}`;
                   },
                 },
+                backgroundColor: "rgba(30, 64, 175, 0.95)",
+                titleColor: "#ffffff",
+                bodyColor: "#ffffff",
               },
             },
           },
         });
       });
-
       // Contact Form Submission (Placeholder until backend)
       document.getElementById("join-form").addEventListener("submit", (e) => {
         e.preventDefault();
