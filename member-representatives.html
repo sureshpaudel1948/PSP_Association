@@ -13,261 +13,274 @@
   </head>
 
   <body class="bg-gray-100 font-sans">
-   <header class="bg-white shadow relative z-50">
-  <nav
-    class="container mx-auto px-4 py-4 flex justify-between items-center relative"
-    data-nav="navbar"
-  >
-    <div class="text-2xl font-bold text-blue-900">
-      <a href="index.html">
-        <img
-          src="assets/img/logo.png"
-          alt="PSP Association Logo"
-          class="h-20 w-auto"
-          style="margin: 0; padding: 0"
-        />
-      </a>
-    </div>
-    <button class="burger md:hidden z-50 p-2 focus:outline-none" data-burger="true">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <ul id="nav-menu" class="flex space-x-6 items-center" data-menu="nav-menu">
-      <li>
-        <a href="index.html" class="text-blue-600 hover:text-blue-800">Home</a>
-      </li>
-      <li class="relative group">
-        <a
-          href="about.html"
-          class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-          aria-haspopup="true"
-          aria-expanded="false"
-          id="about-dropdown-toggle"
+    <header class="bg-white shadow relative z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center relative"
+        data-nav="navbar"
+      >
+        <div class="text-2xl font-bold text-blue-900">
+          <a href="index.html">
+            <img
+              src="assets/img/logo.png"
+              alt="PSP Association Logo"
+              class="h-20 w-auto"
+              style="margin: 0; padding: 0"
+            />
+          </a>
+        </div>
+        <button
+          class="burger md:hidden z-50 p-2 focus:outline-none"
+          data-burger="true"
         >
-          About
-          <svg
-            class="ml-1 w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </a>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
         <ul
-          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
-          id="about-dropdown"
-          role="menu"
+          id="nav-menu"
+          class="flex space-x-6 items-center"
+          data-menu="nav-menu"
         >
           <li>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800"
+              >Home</a
+            >
+          </li>
+          <li class="relative group">
             <a
               href="about.html"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >About Us</a
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="about-dropdown-toggle"
             >
+              About
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
+              id="about-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="about.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="executive.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Executive Committee</a
+                >
+              </li>
+              <li>
+                <a
+                  href="member-representatives.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Member Representatives</a
+                >
+              </li>
+              <li>
+                <a
+                  href="past-members.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Past Members</a
+                >
+              </li>
+              <li>
+                <a
+                  href="member.html"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Member Wallets</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="events.html" class="text-blue-600 hover:text-blue-800"
+              >Events</a
+            >
+          </li>
+          <li class="relative group">
+            <a
+              href="media.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="media-dropdown-toggle"
+            >
+              Media
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
+              id="media-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="media.html#notice"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Notice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#newsletter"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Newsletter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#blogs"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#publications"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Publications</a
+                >
+              </li>
+              <li>
+                <a
+                  href="media.html#gallery"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a
+              href="resources.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+              aria-current="page"
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="resources-dropdown-toggle"
+            >
+              Resources
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
+              id="resources-dropdown"
+              role="menu"
+            >
+              <li>
+                <a
+                  href="resources.html#legislation"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Legislation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#directives"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Directives and Guidelines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#bylaws"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Bylaws</a
+                >
+              </li>
+              <li>
+                <a
+                  href="resources.html#policies"
+                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+                  role="menuitem"
+                  >Policies and Strategies</a
+                >
+              </li>
+            </ul>
           </li>
           <li>
             <a
-              href="executive.html"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Executive Committee</a
+              href="advocacy.html"
+              class="text-blue-600 hover:text-blue-800 font-semibold"
+              aria-current="page"
+              >Advocacy</a
             >
           </li>
           <li>
-            <a
-              href="member-representatives.html"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Member Representatives</a
+            <a href="contact.html" class="text-blue-600 hover:text-blue-800"
+              >Contact</a
             >
           </li>
-          <li>
+          <li class="ml-10">
             <a
-              href="past-members.html"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Past Members</a
-            >
-          </li>
-          <li>
-            <a
-              href="member.html"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Member Wallets</a
+              href="membership.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >Collaborate With Us</a
             >
           </li>
         </ul>
-      </li>
-      <li>
-        <a href="events.html" class="text-blue-600 hover:text-blue-800">Events</a>
-      </li>
-      <li class="relative group">
-        <a
-          href="media.html"
-          class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-          aria-current="page"
-          aria-haspopup="true"
-          aria-expanded="false"
-          id="media-dropdown-toggle"
-        >
-          Media
-          <svg
-            class="ml-1 w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </a>
-        <ul
-          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
-          id="media-dropdown"
-          role="menu"
-        >
-          <li>
-            <a
-              href="media.html#notice"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Notice</a
-            >
-          </li>
-          <li>
-            <a
-              href="media.html#newsletter"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Newsletter</a
-            >
-          </li>
-          <li>
-            <a
-              href="media.html#blogs"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Blogs</a
-            >
-          </li>
-          <li>
-            <a
-              href="media.html#publications"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Publications</a
-            >
-          </li>
-          <li>
-            <a
-              href="media.html#gallery"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Gallery</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="relative group">
-        <a
-          href="resources.html"
-          class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-          aria-current="page"
-          aria-haspopup="true"
-          aria-expanded="false"
-          id="resources-dropdown-toggle"
-        >
-          Resources
-          <svg
-            class="ml-1 w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </a>
-        <ul
-          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
-          id="resources-dropdown"
-          role="menu"
-        >
-          <li>
-            <a
-              href="resources.html#legislation"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Legislation</a
-            >
-          </li>
-          <li>
-            <a
-              href="resources.html#directives"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Directives and Guidelines</a
-            >
-          </li>
-          <li>
-            <a
-              href="resources.html#bylaws"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Bylaws</a
-            >
-          </li>
-          <li>
-            <a
-              href="resources.html#policies"
-              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-              role="menuitem"
-              >Policies and Strategies</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a
-          href="advocacy.html"
-          class="text-blue-600 hover:text-blue-800 font-semibold"
-          aria-current="page"
-          >Advocacy</a
-        >
-      </li>
-      <li>
-        <a href="contact.html" class="text-blue-600 hover:text-blue-800">Contact</a>
-      </li>
-      <li class="ml-10">
-        <a
-          href="membership.html"
-          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >Collaborate With Us</a
-        >
-      </li>
-    </ul>
-  </nav>
-</header>
+      </nav>
+    </header>
     <main class="container mx-auto px-4 py-12">
       <section class="mb-12">
         <h2 class="text-2xl font-semibold text-blue-900 mb-6 text-center">
@@ -322,8 +335,8 @@
             </div>
           </div>
 
-           <!-- Member 2 -->
-         <div
+          <!-- Member 2 -->
+          <div
             class="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-6"
           >
             <div class="flex-shrink-0">
@@ -337,26 +350,19 @@
               <h3 class="text-blue-900 font-medium">
                 Member: Prakash Bhandari
               </h3>
-              <p class="text-gray-600 mb-4">CFO, Nepal Digital Payments Company Limited (Namaste Pay)</p>
+              <p class="text-gray-600 mb-4">
+                CFO, Nepal Digital Payments Company Limited (Namaste Pay)
+              </p>
               <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                Prakash Bhandari is a dynamic and results-driven professional
-                with a proven track record in business development, sales, and
-                marketing. With years of hands-on experience across strategic
-                planning, budgeting, partnership management and end-to-end
-                business execution, he brings a balanced mix of analytical
-                thinking and creative problem-solving to every project. Known
-                for excellent communication skills and the ability to build and
-                maintain strong relationships with colleagues, clients, and
-                stakeholders, he thrives in collaborative environments that
-                encourage teamwork and innovation. His proficiency in content
-                marketing, crafting compelling sales pitches and data-driven
-                reporting ensures that strategies are not just well conceived
-                but also effectively executed and measured. A passionate travel
-                enthusiast, he is always open to exploring new markets and
-                opportunities, bringing a global perspective to the fintech
-                landscape. With a positive attitude and strong interpersonal
-                skills, he consistently contributes to the growth and success of
-                forward-thinking organizations.
+                Prakash Bhandari, CFO of Nepal Digital Payments Company Ltd.
+                (Namaste Pay), is a finance professional with a Master’s in
+                Business Studies and over a decade of experience in financial
+                management, investment, and compliance. He has worked with
+                leading audit firms, served as CFO of One to Watch Nepal across
+                multiple countries, and consulted for global agencies and
+                enterprises on FDI, structuring, and taxation. Since 2022, he
+                has been leading finance at Namaste Pay, with expertise in
+                alternative investment, IFRS, taxation, and corporate risk.
               </p>
               <a
                 href="https://www.linkedin.com/in/prakash-bhandari-38a955161/"
@@ -366,10 +372,6 @@
             </div>
           </div>
         </div>
-
-       
-          
-        
       </section>
     </main>
 
@@ -379,8 +381,8 @@
           <div>
             <h3 class="text-lg font-semibold mb-4">PSP Association</h3>
             <p class="text-gray-300">
-              Empowering professionals with resources, events, and community
-              support for PSP excellence.
+              Advocating for accessible digital financial services
+              for all Nepali.
             </p>
           </div>
           <div>
@@ -418,7 +420,7 @@
                 <a
                   href="https://www.nrb.org.np/departments/psd/"
                   class="text-gray-300 hover:text-white"
-                  >NRB PSP Department</a
+                  >NRB Payment System Department</a
                 >
               </li>
 
@@ -433,7 +435,7 @@
                 <a
                   href="  https://mof.gov.np/"
                   class="text-gray-300 hover:text-white"
-                  >Ministry Of Finance</a
+                  >Ministry of Finance</a
                 >
               </li>
             </ul>
