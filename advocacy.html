@@ -17,597 +17,595 @@
     </script>
   </head>
   <body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow relative z-50">
-      <nav
-        class="container mx-auto px-4 py-4 flex justify-between items-center relative"
-      >
-        <div class="text-2xl font-bold text-blue-900">
-          <a href="index.html">
-            <img
-              src="assets/img/logo.png"
-              alt="PSP Association Logo"
-              class="h-20 w-auto"
-              style="margin: 0; padding: 0"
-            />
-          </a>
-        </div>
-        <button class="burger md:hidden z-50 p-2 focus:outline-none">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul class="flex space-x-6 items-center">
+   <header class="bg-white shadow relative z-50">
+  <nav
+    class="container mx-auto px-4 py-4 flex justify-between items-center relative"
+    data-nav="navbar"
+  >
+    <div class="text-2xl font-bold text-blue-900">
+      <a href="index.html">
+        <img
+          src="assets/img/logo.png"
+          alt="PSP Association Logo"
+          class="h-20 w-auto"
+          style="margin: 0; padding: 0"
+        />
+      </a>
+    </div>
+    <button class="burger md:hidden z-50 p-2 focus:outline-none" data-burger="true">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul id="nav-menu" class="flex space-x-6 items-center" data-menu="nav-menu">
+      <li>
+        <a href="index.html" class="text-blue-600 hover:text-blue-800">Home</a>
+      </li>
+      <li class="relative group">
+        <a
+          href="about.html"
+          class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+          aria-haspopup="true"
+          aria-expanded="false"
+          id="about-dropdown-toggle"
+        >
+          About
+          <svg
+            class="ml-1 w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </a>
+        <ul
+          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
+          id="about-dropdown"
+          role="menu"
+        >
           <li>
-            <a href="index.html" class="text-blue-600 hover:text-blue-800"
-              >Home</a
-            >
-          </li>
-          <li class="relative group">
             <a
               href="about.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-              aria-haspopup="true"
-              aria-expanded="false"
-              id="about-dropdown-toggle"
-            >
-              About
-              <svg
-                class="ml-1 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </a>
-            <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
-              id="about-dropdown"
-              role="menu"
-            >
-              <li>
-                <a
-                  href="about.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="executive.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Executive Committee</a
-                >
-              </li>
-                <li>
-                <a
-                  href="member-representatives.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Member Representatives</a
-                >
-              </li>
-              <li>
-                <a
-                  href="past-members.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Past Members</a
-                >
-              </li>
-              <li>
-                <a
-                  href="member.html"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Member Wallets</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="events.html" class="text-blue-600 hover:text-blue-800"
-              >Events</a
-            >
-          </li>
-          <li class="relative group">
-            <a
-              href="media.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-              aria-current="page"
-              aria-haspopup="true"
-              aria-expanded="false"
-              id="media-dropdown-toggle"
-            >
-              Media
-              <svg
-                class="ml-1 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </a>
-            <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
-              id="media-dropdown"
-              role="menu"
-            >
-              <li>
-                <a
-                  href="media.html#notice"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Notice</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#newsletter"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Newsletter</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#blogs"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Blogs</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#publications"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Publications</a
-                >
-              </li>
-              <li>
-                <a
-                  href="media.html#gallery"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Gallery</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="relative group">
-            <a
-              href="resources.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-              aria-current="page"
-              aria-haspopup="true"
-              aria-expanded="false"
-              id="resources-dropdown-toggle"
-            >
-              Resources
-              <svg
-                class="ml-1 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </a>
-            <ul
-              class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
-              id="resources-dropdown"
-              role="menu"
-            >
-              <li>
-                <a
-                  href="resources.html#legislation"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Legislation</a
-                >
-              </li>
-              <li>
-                <a
-                  href="resources.html#directives"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Directives and Guidelines</a
-                >
-              </li>
-              <li>
-                <a
-                  href="resources.html#bylaws"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Bylaws</a
-                >
-              </li>
-              <li>
-                <a
-                  href="resources.html#policies"
-                  class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
-                  role="menuitem"
-                  >Policies and Strategies</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="advocacy.html"
-              class="text-blue-600 hover:text-blue-800 font-semibold"
-              aria-current="page"
-              >Advocacy</a
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >About Us</a
             >
           </li>
           <li>
-            <a href="contact.html" class="text-blue-600 hover:text-blue-800"
-              >Contact</a
+            <a
+              href="executive.html"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Executive Committee</a
             >
           </li>
-          <li class="ml-10">
+          <li>
             <a
-              href="membership.html"
-              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-              >Collaborate With Us</a
+              href="member-representatives.html"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Member Representatives</a
+            >
+          </li>
+          <li>
+            <a
+              href="past-members.html"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Past Members</a
+            >
+          </li>
+          <li>
+            <a
+              href="member.html"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Member Wallets</a
             >
           </li>
         </ul>
-      </nav>
-    </header>
+      </li>
+      <li>
+        <a href="events.html" class="text-blue-600 hover:text-blue-800">Events</a>
+      </li>
+      <li class="relative group">
+        <a
+          href="media.html"
+          class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+          aria-current="page"
+          aria-haspopup="true"
+          aria-expanded="false"
+          id="media-dropdown-toggle"
+        >
+          Media
+          <svg
+            class="ml-1 w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </a>
+        <ul
+          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
+          id="media-dropdown"
+          role="menu"
+        >
+          <li>
+            <a
+              href="media.html#notice"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Notice</a
+            >
+          </li>
+          <li>
+            <a
+              href="media.html#newsletter"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Newsletter</a
+            >
+          </li>
+          <li>
+            <a
+              href="media.html#blogs"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="media.html#publications"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Publications</a
+            >
+          </li>
+          <li>
+            <a
+              href="media.html#gallery"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="relative group">
+        <a
+          href="resources.html"
+          class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+          aria-current="page"
+          aria-haspopup="true"
+          aria-expanded="false"
+          id="resources-dropdown-toggle"
+        >
+          Resources
+          <svg
+            class="ml-1 w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </a>
+        <ul
+          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-50"
+          id="resources-dropdown"
+          role="menu"
+        >
+          <li>
+            <a
+              href="resources.html#legislation"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Legislation</a
+            >
+          </li>
+          <li>
+            <a
+              href="resources.html#directives"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Directives and Guidelines</a
+            >
+          </li>
+          <li>
+            <a
+              href="resources.html#bylaws"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Bylaws</a
+            >
+          </li>
+          <li>
+            <a
+              href="resources.html#policies"
+              class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800"
+              role="menuitem"
+              >Policies and Strategies</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a
+          href="advocacy.html"
+          class="text-blue-600 hover:text-blue-800 font-semibold"
+          aria-current="page"
+          >Advocacy</a
+        >
+      </li>
+      <li>
+        <a href="contact.html" class="text-blue-600 hover:text-blue-800">Contact</a>
+      </li>
+      <li class="ml-10">
+        <a
+          href="membership.html"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >Collaborate With Us</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto px-4 py-12">
+      <!-- Advocacy Overview Section -->
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-900 mb-4">Advocacy</h1>
+        <p class="text-gray-700 max-w-2xl mx-auto" style="text-align: justify">
+          The PSP Association is committed to advocating for policies and
+          regulations that foster innovation, inclusion, and security in Nepal’s
+          digital payment ecosystem. Through policy briefs and regulatory
+          updates, we engage with stakeholders to shape a supportive environment
+          for Payment Service Providers.
+        </p>
+      </section>
 
-   <main class="container mx-auto px-4 py-12">
-  <!-- Advocacy Overview Section -->
-  <section class="text-center mb-12">
-    <h1 class="text-4xl font-bold text-blue-900 mb-4">Advocacy</h1>
-    <p class="text-gray-700 max-w-2xl mx-auto" style="text-align: justify">
-      The PSP Association is committed to advocating for policies and
-      regulations that foster innovation, inclusion, and security in Nepal’s
-      digital payment ecosystem. Through policy briefs and regulatory
-      updates, we engage with stakeholders to shape a supportive environment
-      for Payment Service Providers.
-    </p>
-  </section>
+      <!-- Policy Advocacy Briefs Section -->
+      <section class="mb-12" id="policy-briefs">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+          Policy Advocacy Briefs
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="assets/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Promoting Financial Inclusion, 2025
+            </h3>
+            <p class="text-gray-600">
+              A brief advocating for policies to expand access to digital
+              financial services in rural Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/financial_inclusion_brief_2025.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="assets/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Enhancing Cybersecurity in PSPs, 2025
+            </h3>
+            <p class="text-gray-600">
+              Recommendations for strengthening cybersecurity measures for
+              Payment Service Providers.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/cybersecurity_brief_2025.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="assets/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Streamlining Licensing for PSPs, 2024
+            </h3>
+            <p class="text-gray-600">
+              Policy brief on simplifying licensing processes for new PSPs in
+              Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/licensing_brief_2024.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+      </section>
 
-  <!-- Policy Advocacy Briefs Section -->
-  <section class="mb-12" id="policy-briefs">
-    <h2 class="text-2xl font-semibold text-blue-900 mb-6">
-      Policy Advocacy Briefs
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-      >
-        <img
-          src="assets/img/pdf_icon.png"
-          alt="PDF Icon"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold text-blue-900 mb-2">
-          Promoting Financial Inclusion, 2025
-        </h3>
-        <p class="text-gray-600">
-          A brief advocating for policies to expand access to digital
-          financial services in rural Nepal.
-        </p>
-        <button
-          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
-          data-pdf="resources/pdfs/financial_inclusion_brief_2025.pdf"
-        >
-          View PDF
-        </button>
-      </article>
-      <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-      >
-        <img
-          src="assets/img/pdf_icon.png"
-          alt="PDF Icon"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold text-blue-900 mb-2">
-          Enhancing Cybersecurity in PSPs, 2025
-        </h3>
-        <p class="text-gray-600">
-          Recommendations for strengthening cybersecurity measures for
-          Payment Service Providers.
-        </p>
-        <button
-          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
-          data-pdf="resources/pdfs/cybersecurity_brief_2025.pdf"
-        >
-          View PDF
-        </button>
-      </article>
-      <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-      >
-        <img
-          src="assets/img/pdf_icon.png"
-          alt="PDF Icon"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold text-blue-900 mb-2">
-          Streamlining Licensing for PSPs, 2024
-        </h3>
-        <p class="text-gray-600">
-          Policy brief on simplifying licensing processes for new PSPs in
-          Nepal.
-        </p>
-        <button
-          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
-          data-pdf="resources/pdfs/licensing_brief_2024.pdf"
-        >
-          View PDF
-        </button>
-      </article>
-    </div>
-  </section>
+      <!-- Regulatory Updates Section -->
+      <section class="mb-12" id="regulatory-updates">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-6">
+          Regulatory Updates
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="assets/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              NRB Payment System Directives Update, June 2025
+            </h3>
+            <p class="text-gray-600">
+              Latest updates to Nepal Rastra Bank’s directives for payment
+              systems.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/nrb_directives_update_2025.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="assets/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              AML/CFT Compliance Guidelines, April 2025
+            </h3>
+            <p class="text-gray-600">
+              Revised guidelines for anti-money laundering and counter-terrorism
+              financing compliance.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/aml_cft_guidelines_2025.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+          <article
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src="assets/img/pdf_icon.png"
+              alt="PDF Icon"
+              class="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              E-commerce Regulation Changes, January 2025
+            </h3>
+            <p class="text-gray-600">
+              Updates to regulations governing e-commerce transactions in Nepal.
+            </p>
+            <button
+              class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
+              data-pdf="resources/pdfs/ecommerce_regulation_2025.pdf"
+            >
+              View PDF
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
 
-  <!-- Regulatory Updates Section -->
-  <section class="mb-12" id="regulatory-updates">
-    <h2 class="text-2xl font-semibold text-blue-900 mb-6">
-      Regulatory Updates
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-      >
-        <img
-          src="assets/img/pdf_icon.png"
-          alt="PDF Icon"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold text-blue-900 mb-2">
-          NRB Payment System Directives Update, June 2025
-        </h3>
-        <p class="text-gray-600">
-          Latest updates to Nepal Rastra Bank’s directives for payment
-          systems.
-        </p>
-        <button
-          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
-          data-pdf="resources/pdfs/nrb_directives_update_2025.pdf"
-        >
-          View PDF
-        </button>
-      </article>
-      <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-      >
-        <img
-          src="assets/img/pdf_icon.png"
-          alt="PDF Icon"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold text-blue-900 mb-2">
-          AML/CFT Compliance Guidelines, April 2025
-        </h3>
-        <p class="text-gray-600">
-          Revised guidelines for anti-money laundering and counter-terrorism
-          financing compliance.
-        </p>
-        <button
-          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
-          data-pdf="resources/pdfs/aml_cft_guidelines_2025.pdf"
-        >
-          View PDF
-        </button>
-      </article>
-      <article
-        class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-      >
-        <img
-          src="assets/img/pdf_icon.png"
-          alt="PDF Icon"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold text-blue-900 mb-2">
-          E-commerce Regulation Changes, January 2025
-        </h3>
-        <p class="text-gray-600">
-          Updates to regulations governing e-commerce transactions in Nepal.
-        </p>
-        <button
-          class="text-blue-600 hover:text-blue-800 mt-4 inline-block view-pdf"
-          data-pdf="resources/pdfs/ecommerce_regulation_2025.pdf"
-        >
-          View PDF
-        </button>
-      </article>
-    </div>
-  </section>
-</main>
-
-<!-- PDF Viewer Modal -->
-<div
-  id="pdf-modal"
-  class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50 modal animate-fade-in"
-  role="dialog"
-  aria-labelledby="pdf-modal-title"
-  aria-modal="true"
->
-  <div
-    class="bg-white rounded-lg w-full max-w-4xl md:max-w-3xl sm:max-w-[90%] h-[80vh] md:h-[70vh] sm:h-[85vh] flex flex-col relative modal-content"
-  >
-    <div class="p-4 border-b flex justify-between items-center">
-      <h2 id="pdf-modal-title" class="text-xl font-semibold text-blue-900">
-        PDF Viewer
-      </h2>
-      <button
-        id="close-modal"
-        class="text-gray-600 hover:text-gray-800 focus:outline-none z-10 close"
-        aria-label="Close PDF Viewer"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
-        </svg>
-      </button>
-    </div>
-    <div class="flex-1 overflow-y-auto p-4">
-      <canvas id="pdf-canvas" class="w-full h-full" style="max-width: 100%;"></canvas>
-    </div>
+    <!-- PDF Viewer Modal -->
     <div
-      id="pdf-controls"
-      class="p-4 border-t bg-white sticky bottom-0 flex justify-between items-center"
+      id="pdf-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50 modal animate-fade-in"
+      role="dialog"
+      aria-labelledby="pdf-modal-title"
+      aria-modal="true"
     >
-      <button
-        id="prev-page"
-        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
-        disabled
+      <div
+        class="bg-white rounded-lg w-full max-w-4xl md:max-w-3xl sm:max-w-[90%] h-[80vh] md:h-[70vh] sm:h-[85vh] flex flex-col relative modal-content"
       >
-        Previous
-      </button>
-      <span id="page-info" class="text-gray-600"
-        >Page 1 of <span id="total-pages">1</span></span
-      >
-      <button
-        id="next-page"
-        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
-        disabled
-      >
-        Next
-      </button>
+        <div class="p-4 border-b flex justify-between items-center">
+          <h2 id="pdf-modal-title" class="text-xl font-semibold text-blue-900">
+            PDF Viewer
+          </h2>
+          <button
+            id="close-modal"
+            class="text-gray-600 hover:text-gray-800 focus:outline-none z-10 close"
+            aria-label="Close PDF Viewer"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4">
+          <canvas
+            id="pdf-canvas"
+            class="w-full h-full"
+            style="max-width: 100%"
+          ></canvas>
+        </div>
+        <div
+          id="pdf-controls"
+          class="p-4 border-t bg-white sticky bottom-0 flex justify-between items-center"
+        >
+          <button
+            id="prev-page"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+            disabled
+          >
+            Previous
+          </button>
+          <span id="page-info" class="text-gray-600"
+            >Page 1 of <span id="total-pages">1</span></span
+          >
+          <button
+            id="next-page"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+            disabled
+          >
+            Next
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("pdf-modal");
-    const canvas = document.getElementById("pdf-canvas");
-    const ctx = canvas.getContext("2d");
-    const prevPageBtn = document.getElementById("prev-page");
-    const nextPageBtn = document.getElementById("next-page");
-    const pageInfo = document.getElementById("page-info");
-    const totalPagesSpan = document.getElementById("total-pages");
-    const closeModalBtn = document.getElementById("close-modal");
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("pdf-modal");
+        const canvas = document.getElementById("pdf-canvas");
+        const ctx = canvas.getContext("2d");
+        const prevPageBtn = document.getElementById("prev-page");
+        const nextPageBtn = document.getElementById("next-page");
+        const pageInfo = document.getElementById("page-info");
+        const totalPagesSpan = document.getElementById("total-pages");
+        const closeModalBtn = document.getElementById("close-modal");
 
-    let pdfDoc = null;
-    let pageNum = 1;
+        let pdfDoc = null;
+        let pageNum = 1;
 
-    document.querySelectorAll(".view-pdf").forEach((button) => {
-      button.addEventListener("click", async () => {
-        const pdfPath = button.getAttribute("data-pdf");
-        try {
-          pdfDoc = await pdfjsLib.getDocument(pdfPath).promise;
-          totalPagesSpan.textContent = pdfDoc.numPages;
-          pageNum = 1;
-          renderPage();
-          modal.classList.remove("hidden");
-          modal.classList.add("show");
-        } catch (error) {
-          console.error("Error loading PDF:", error);
-          alert(
-            "Failed to load PDF. Please check the file path or contact support."
+        document.querySelectorAll(".view-pdf").forEach((button) => {
+          button.addEventListener("click", async () => {
+            const pdfPath = button.getAttribute("data-pdf");
+            try {
+              pdfDoc = await pdfjsLib.getDocument(pdfPath).promise;
+              totalPagesSpan.textContent = pdfDoc.numPages;
+              pageNum = 1;
+              renderPage();
+              modal.classList.remove("hidden");
+              modal.classList.add("show");
+            } catch (error) {
+              console.error("Error loading PDF:", error);
+              alert(
+                "Failed to load PDF. Please check the file path or contact support."
+              );
+            }
+          });
+        });
+
+        async function renderPage() {
+          if (!pdfDoc || pageNum < 1 || pageNum > pdfDoc.numPages) return;
+
+          const page = await pdfDoc.getPage(pageNum);
+          const container = document.querySelector(
+            "#pdf-modal > .modal-content"
           );
+          const viewportWidth = container.clientWidth - 32; // Account for padding
+          const viewportHeight = container.clientHeight - 120; // Account for header and controls
+          const scale = Math.min(
+            viewportWidth / page.getViewport({ scale: 0.5 }).width,
+            viewportHeight / page.getViewport({ scale: 0.5 }).height
+          );
+          const scaledViewport = page.getViewport({ scale: scale });
+
+          canvas.height = scaledViewport.height;
+          canvas.width = scaledViewport.width;
+          canvas.style.maxWidth = "100%";
+
+          const renderContext = {
+            canvasContext: ctx,
+            viewport: scaledViewport,
+          };
+          await page.render(renderContext);
+
+          pageInfo.textContent = `Page ${pageNum} of ${pdfDoc.numPages}`;
+          prevPageBtn.disabled = pageNum <= 1;
+          nextPageBtn.disabled = pageNum >= pdfDoc.numPages;
         }
+
+        prevPageBtn.addEventListener("click", () => {
+          if (pageNum > 1) {
+            pageNum--;
+            renderPage();
+          }
+        });
+
+        nextPageBtn.addEventListener("click", () => {
+          if (pageNum < pdfDoc.numPages) {
+            pageNum++;
+            renderPage();
+          }
+        });
+
+        closeModalBtn.addEventListener("click", () => {
+          modal.classList.add("hidden");
+          modal.classList.remove("show");
+          pageNum = 1;
+          canvas.height = 0;
+          canvas.width = 0;
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+            modal.classList.remove("show");
+            pageNum = 1;
+            canvas.height = 0;
+            canvas.width = 0;
+          }
+        });
+
+        // Resize handler to re-render on window resize
+        window.addEventListener("resize", () => {
+          if (modal.classList.contains("show")) {
+            renderPage();
+          }
+        });
       });
-    });
-
-    async function renderPage() {
-      if (!pdfDoc || pageNum < 1 || pageNum > pdfDoc.numPages) return;
-
-      const page = await pdfDoc.getPage(pageNum);
-      const container = document.querySelector(
-        "#pdf-modal > .modal-content"
-      );
-      const viewportWidth = container.clientWidth - 32; // Account for padding
-      const viewportHeight = container.clientHeight - 120; // Account for header and controls
-      const scale = Math.min(
-        viewportWidth / page.getViewport({ scale: 0.5 }).width,
-        viewportHeight / page.getViewport({ scale: 0.5 }).height
-      );
-      const scaledViewport = page.getViewport({ scale: scale });
-
-      canvas.height = scaledViewport.height;
-      canvas.width = scaledViewport.width;
-      canvas.style.maxWidth = "100%";
-
-      const renderContext = {
-        canvasContext: ctx,
-        viewport: scaledViewport,
-      };
-      await page.render(renderContext);
-
-      pageInfo.textContent = `Page ${pageNum} of ${pdfDoc.numPages}`;
-      prevPageBtn.disabled = pageNum <= 1;
-      nextPageBtn.disabled = pageNum >= pdfDoc.numPages;
-    }
-
-    prevPageBtn.addEventListener("click", () => {
-      if (pageNum > 1) {
-        pageNum--;
-        renderPage();
-      }
-    });
-
-    nextPageBtn.addEventListener("click", () => {
-      if (pageNum < pdfDoc.numPages) {
-        pageNum++;
-        renderPage();
-      }
-    });
-
-    closeModalBtn.addEventListener("click", () => {
-      modal.classList.add("hidden");
-      modal.classList.remove("show");
-      pageNum = 1;
-      canvas.height = 0;
-      canvas.width = 0;
-    });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.add("hidden");
-        modal.classList.remove("show");
-        pageNum = 1;
-        canvas.height = 0;
-        canvas.width = 0;
-      }
-    });
-
-    // Resize handler to re-render on window resize
-    window.addEventListener("resize", () => {
-      if (modal.classList.contains("show")) {
-        renderPage();
-      }
-    });
-  });
-</script>
+    </script>
     <footer class="bg-blue-900 text-white py-8">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
