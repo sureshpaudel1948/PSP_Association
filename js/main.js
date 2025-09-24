@@ -9,96 +9,86 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Dropdown Toggles (About, Media, Resources)
-  const dropdownToggles = document.querySelectorAll('#about-dropdown-toggle, #media-dropdown-toggle, #resources-dropdown-toggle');
-  const dropdownMenus = {
-    'about-dropdown-toggle': 'about-dropdown',
-    'media-dropdown-toggle': 'media-dropdown',
-    'resources-dropdown-toggle': 'resources-dropdown'
-  };
+  // Navbar and Burger Toggle
+  const burger = document.querySelector("[data-burger]");
+  const navMenu = document.querySelector("[data-menu='nav-menu']");
+  const dropdownToggles = document.querySelectorAll(
+    "#about-dropdown-toggle, #media-dropdown-toggle, #resources-dropdown-toggle"
+  );
 
-  dropdownToggles.forEach(toggle => {
-    const menuId = dropdownMenus[toggle.id];
-    const menu = document.getElementById(menuId);
-
-    if (toggle && menu) {
-      // Hover to show (desktop)
-      toggle.addEventListener("mouseenter", () => {
-        if (window.innerWidth > 768) {
-          menu.style.display = "block";
-          toggle.setAttribute("aria-expanded", "true");
+  // Ensure elements exist before adding event listeners
+  if (burger && navMenu && dropdownToggles.length > 0) {
+    // Toggle burger and nav menu
+    burger.addEventListener("click", () => {
+      const isActive = burger.classList.contains("active");
+      burger.classList.toggle("active");
+      navMenu.classList.toggle("active", !isActive); // Ensure toggle works reliably
+      // Close dropdowns when menu is toggled
+      dropdownToggles.forEach((toggle) => {
+        const dropdownId = toggle.getAttribute("id").replace("-toggle", "");
+        const dropdown = document.getElementById(dropdownId);
+        if (dropdown) {
+          toggle.classList.remove("active");
+          dropdown.classList.remove("active");
         }
       });
+    });
 
-      // Click to toggle (mobile/desktop persistence)
+    // Toggle dropdowns on mobile
+    dropdownToggles.forEach((toggle) => {
       toggle.addEventListener("click", (e) => {
-        e.preventDefault();
-        const isVisible = menu.style.display !== "none";
         if (window.innerWidth <= 768) {
-          menu.style.display = isVisible ? "none" : "block";
-          toggle.setAttribute("aria-expanded", !isVisible);
+          e.preventDefault();
+          const dropdownId = toggle.getAttribute("id").replace("-toggle", "");
+          const dropdown = document.getElementById(dropdownId);
+          if (dropdown) {
+            const isActive = toggle.classList.contains("active");
+            toggle.classList.toggle("active");
+            dropdown.classList.toggle("active", !isActive);
+            // Close other dropdowns if this one opens
+            dropdownToggles.forEach((otherToggle) => {
+              if (otherToggle !== toggle) {
+                const otherDropdownId = otherToggle
+                  .getAttribute("id")
+                  .replace("-toggle", "");
+                const otherDropdown = document.getElementById(otherDropdownId);
+                if (otherDropdown) {
+                  otherToggle.classList.remove("active");
+                  otherDropdown.classList.remove("active");
+                }
+              }
+            });
+          }
         }
       });
+    });
 
-      // Mouse leave to hide (desktop)
-      toggle.addEventListener("mouseleave", () => {
-        if (window.innerWidth > 768) {
-          setTimeout(() => {
-            if (!menu.matches(":hover")) {
-              menu.style.display = "none";
-              toggle.setAttribute("aria-expanded", "false");
-            }
-          }, 200);
-        }
-      });
-
-      // Hide submenu on leave
-      menu.addEventListener("mouseleave", () => {
-        if (window.innerWidth > 768) {
-          menu.style.display = "none";
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-  });
-
-  // Close all dropdowns when clicking outside
-  document.addEventListener("click", (e) => {
-    dropdownToggles.forEach(toggle => {
-      const menuId = dropdownMenus[toggle.id];
-      const menu = document.getElementById(menuId);
-      if (toggle && menu && !toggle.contains(e.target) && !menu.contains(e.target)) {
-        menu.style.display = "none";
-        toggle.setAttribute("aria-expanded", "false");
+    // Close menu when clicking outside on mobile
+    document.addEventListener("click", (e) => {
+      if (
+        window.innerWidth <= 768 &&
+        burger &&
+        navMenu &&
+        !navMenu.contains(e.target) &&
+        !burger.contains(e.target)
+      ) {
+        burger.classList.remove("active");
+        navMenu.classList.remove("active");
+        dropdownToggles.forEach((toggle) => {
+          const dropdownId = toggle.getAttribute("id").replace("-toggle", "");
+          const dropdown = document.getElementById(dropdownId);
+          if (dropdown) {
+            toggle.classList.remove("active");
+            dropdown.classList.remove("active");
+          }
+        });
       }
     });
-  });
-
-  // Mobile Burger Menu Toggle
-  const burger = document.querySelector(".burger");
-  const navUl = document.querySelector("nav ul");
-  if (burger && navUl) {
-    burger.addEventListener("click", () => {
-      navUl.classList.toggle("active");
-      burger.classList.toggle("active");
-      // Hide dropdowns when toggling menu
-      dropdownToggles.forEach(toggle => {
-        const menuId = dropdownMenus[toggle.id];
-        const menu = document.getElementById(menuId);
-        if (menu) menu.style.display = "none";
-      });
-    });
-
-    // Close mobile menu when clicking a link
-    navUl.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
-          navUl.classList.remove("active");
-          burger.classList.remove("active");
-          dropdownToggles.forEach(toggle => toggle.setAttribute("aria-expanded", "false"));
-        }
-      });
-    });
+  } else {
+    console.error(
+      "Error: Navbar elements not found. Ensure 'data-burger' and 'data-menu=\"nav-menu\"' are present in the HTML.",
+      { burger, navMenu, dropdownToggles }
+    );
   }
 
   // PDF Viewer (unchanged)
