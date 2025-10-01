@@ -54,10 +54,19 @@ header nav ul li a:hover {
   transform: translateY(-2px);
 }
 
+/* Fix dropdown hover gap */
 #about-dropdown,
 #media-dropdown,
 #resources-dropdown {
-  z-index: 1000;
+  margin-top: 0 !important;   /* remove the gap */
+  top: 100%;                  /* align directly under parent */
+  left: 0;
+}
+
+#about-dropdown.active,
+#media-dropdown.active,
+#resources-dropdown.active {
+  display: block !important;  /* force show when JS adds .active */
 }
 
 .form input:focus {
