@@ -34,23 +34,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Toggle dropdowns on mobile
+    // Toggle dropdowns with improved handling
     dropdownToggles.forEach((toggle) => {
-      toggle.addEventListener("click", (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const dropdownId = toggle.getAttribute("id").replace("-toggle", "");
-          const dropdown = document.getElementById(dropdownId);
-          if (dropdown) {
+      const dropdownId = toggle.getAttribute("id").replace("-toggle", "");
+      const dropdown = document.getElementById(dropdownId);
+      if (dropdown) {
+        // Click toggle for mobile
+        toggle.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
             const isActive = toggle.classList.contains("active");
             toggle.classList.toggle("active");
             dropdown.classList.toggle("active", !isActive);
-            // Close other dropdowns if this one opens
+            // Close other dropdowns
             dropdownToggles.forEach((otherToggle) => {
               if (otherToggle !== toggle) {
-                const otherDropdownId = otherToggle
-                  .getAttribute("id")
-                  .replace("-toggle", "");
+                const otherDropdownId = otherToggle.getAttribute("id").replace("-toggle", "");
                 const otherDropdown = document.getElementById(otherDropdownId);
                 if (otherDropdown) {
                   otherToggle.classList.remove("active");
@@ -59,8 +58,37 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             });
           }
+        });
+
+        // Hover support for desktop
+        if (window.innerWidth > 768) {
+          const parentLi = toggle.closest("li");
+          parentLi.addEventListener("mouseenter", () => {
+            toggle.classList.add("active");
+            dropdown.classList.add("active");
+          });
+          parentLi.addEventListener("mouseleave", () => {
+            setTimeout(() => {
+              if (!parentLi.matches(":hover") && !dropdown.matches(":hover")) {
+                toggle.classList.remove("active");
+                dropdown.classList.remove("active");
+              }
+            }, 300);
+          });
+          dropdown.addEventListener("mouseenter", () => {
+            toggle.classList.add("active");
+            dropdown.classList.add("active");
+          });
+          dropdown.addEventListener("mouseleave", () => {
+            setTimeout(() => {
+              if (!parentLi.matches(":hover")) {
+                toggle.classList.remove("active");
+                dropdown.classList.remove("active");
+              }
+            }, 300);
+          });
         }
-      });
+      }
     });
 
     // Close menu when clicking outside on mobile
